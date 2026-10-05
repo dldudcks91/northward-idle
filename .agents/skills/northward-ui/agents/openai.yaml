@@ -1,0 +1,6 @@
+interface:
+  display_name: "북방 게임 화면"
+  short_description: "Build blue northern UI and timed combat presentation"
+  default_prompt: "Use $northward-ui to 파란색 북방 게임 화면과 활동 흐름을 구현하고 관전·화면 이동·복귀 요약을 확인해줘."
+policy:
+  allow_implicit_invocation: true

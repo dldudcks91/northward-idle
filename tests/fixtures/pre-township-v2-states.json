@@ -1,0 +1,1840 @@
+{
+  "provenance": "Captured from the original v2 engine on 2026-10-05. Synthetic save fixtures; no user browser data.",
+  "fixtures": {
+    "gathering": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 2001,
+        "rng": 712,
+        "regionId": "rime-shore",
+        "unlockedRegions": [
+          "rime-shore"
+        ],
+        "clearedRegions": [],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 8
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 0,
+            "level": 1
+          },
+          "mining": {
+            "xp": 0,
+            "level": 1
+          },
+          "foraging": {
+            "xp": 0,
+            "level": 1
+          },
+          "crafting": {
+            "xp": 0,
+            "level": 1
+          },
+          "cooking": {
+            "xp": 0,
+            "level": 1
+          },
+          "combat": {
+            "xp": 0,
+            "level": 1
+          },
+          "exploration": {
+            "xp": 0,
+            "level": 1
+          }
+        },
+        "equipment": {
+          "weapon": "starter-spear",
+          "armor": "starter-coat",
+          "charm": "starter-charm"
+        },
+        "hp": 108,
+        "activity": {
+          "type": "gather",
+          "id": "rime-shore-logging",
+          "regionId": "rime-shore",
+          "progressMs": 2001,
+          "durationMs": 12000,
+          "status": "active",
+          "remaining": null,
+          "reserved": null
+        },
+        "phase": "working",
+        "battle": null,
+        "suspendedBattle": null,
+        "nextRaidAt": 300000,
+        "nextHealAt": 5000,
+        "recoveryUntil": null,
+        "pendingRaids": 0,
+        "lossBudget": null,
+        "autoFood": true,
+        "offlineBlocked": false,
+        "stopReason": null,
+        "events": [
+          {
+            "id": 1,
+            "time": 0,
+            "type": "story",
+            "text": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다."
+          },
+          {
+            "id": 2,
+            "time": 0,
+            "type": "guide",
+            "text": "원목·광석·식재료를 모아 음식과 세 종류의 장비를 준비하세요."
+          },
+          {
+            "id": 3,
+            "time": 0,
+            "type": "activity",
+            "text": "해송 원목 벌목 시작"
+          }
+        ],
+        "eventSequence": 3,
+        "actionSequence": 0,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {},
+          "consumed": {},
+          "lost": {},
+          "raids": 0,
+          "defenseWins": 0,
+          "defenseLosses": 0,
+          "explorationWins": 0,
+          "explorationLosses": 0,
+          "interruptedMs": 0,
+          "offlinePausedMs": 0,
+          "workCycles": 0,
+          "tripsCompleted": 0
+        },
+        "completed": false,
+        "endingAt": null,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "db45bb73"
+    },
+    "crafting": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 1234,
+        "rng": 713,
+        "regionId": "rime-shore",
+        "unlockedRegions": [
+          "rime-shore"
+        ],
+        "clearedRegions": [],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 8,
+          "rime-shore-wood": 8
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 0,
+            "level": 1
+          },
+          "mining": {
+            "xp": 0,
+            "level": 1
+          },
+          "foraging": {
+            "xp": 0,
+            "level": 1
+          },
+          "crafting": {
+            "xp": 0,
+            "level": 1
+          },
+          "cooking": {
+            "xp": 0,
+            "level": 1
+          },
+          "combat": {
+            "xp": 0,
+            "level": 1
+          },
+          "exploration": {
+            "xp": 0,
+            "level": 1
+          }
+        },
+        "equipment": {
+          "weapon": "starter-spear",
+          "armor": "starter-coat",
+          "charm": "starter-charm"
+        },
+        "hp": 108,
+        "activity": {
+          "type": "craft",
+          "id": "rime-shore-saw",
+          "regionId": "rime-shore",
+          "progressMs": 1234,
+          "durationMs": 9000,
+          "status": "active",
+          "remaining": 3,
+          "reserved": {
+            "rime-shore-wood": 4
+          }
+        },
+        "phase": "working",
+        "battle": null,
+        "suspendedBattle": null,
+        "nextRaidAt": 300000,
+        "nextHealAt": 5000,
+        "recoveryUntil": null,
+        "pendingRaids": 0,
+        "lossBudget": null,
+        "autoFood": true,
+        "offlineBlocked": false,
+        "stopReason": null,
+        "events": [
+          {
+            "id": 1,
+            "time": 0,
+            "type": "story",
+            "text": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다."
+          },
+          {
+            "id": 2,
+            "time": 0,
+            "type": "guide",
+            "text": "원목·광석·식재료를 모아 음식과 세 종류의 장비를 준비하세요."
+          },
+          {
+            "id": 3,
+            "time": 0,
+            "type": "activity",
+            "text": "해송 판재 가공 시작"
+          }
+        ],
+        "eventSequence": 3,
+        "actionSequence": 0,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {},
+          "consumed": {},
+          "lost": {},
+          "raids": 0,
+          "defenseWins": 0,
+          "defenseLosses": 0,
+          "explorationWins": 0,
+          "explorationLosses": 0,
+          "interruptedMs": 0,
+          "offlinePausedMs": 0,
+          "workCycles": 0,
+          "tripsCompleted": 0
+        },
+        "completed": false,
+        "endingAt": null,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "5e9fb6a3"
+    },
+    "explorationBattle": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 9000,
+        "rng": 197721003,
+        "regionId": "rime-shore",
+        "unlockedRegions": [
+          "rime-shore"
+        ],
+        "clearedRegions": [],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 29,
+          "rime-shore-weapon": 1,
+          "rime-shore-armor": 1,
+          "rime-shore-charm": 1
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 0,
+            "level": 1
+          },
+          "mining": {
+            "xp": 0,
+            "level": 1
+          },
+          "foraging": {
+            "xp": 0,
+            "level": 1
+          },
+          "crafting": {
+            "xp": 0,
+            "level": 1
+          },
+          "cooking": {
+            "xp": 0,
+            "level": 1
+          },
+          "combat": {
+            "xp": 0,
+            "level": 1
+          },
+          "exploration": {
+            "xp": 0,
+            "level": 1
+          }
+        },
+        "equipment": {
+          "weapon": "rime-shore-weapon",
+          "armor": "rime-shore-armor",
+          "charm": "rime-shore-charm"
+        },
+        "hp": 128,
+        "activity": {
+          "type": "explore",
+          "id": "rime-shore",
+          "regionId": "rime-shore",
+          "encounters": 0,
+          "stage": "battle",
+          "progressMs": 0,
+          "durationMs": 8000,
+          "status": "active",
+          "repeat": false
+        },
+        "phase": "exploring",
+        "battle": {
+          "id": 1,
+          "kind": "exploration",
+          "enemyId": "rime-shore-wolf",
+          "enemyHp": 52,
+          "enemyMaxHp": 52,
+          "startedAt": 8000,
+          "playerAttackMs": 2950,
+          "enemyAttackMs": 3250,
+          "nextPlayerAt": 10950,
+          "nextEnemyAt": 11250,
+          "nextActionAt": 10950,
+          "lastAction": null,
+          "turns": 0,
+          "playerTurns": 0,
+          "guardNext": false
+        },
+        "suspendedBattle": null,
+        "nextRaidAt": 300000,
+        "nextHealAt": 10000,
+        "recoveryUntil": null,
+        "pendingRaids": 0,
+        "lossBudget": null,
+        "autoFood": true,
+        "offlineBlocked": false,
+        "stopReason": null,
+        "events": [
+          {
+            "id": 1,
+            "time": 0,
+            "type": "story",
+            "text": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다."
+          },
+          {
+            "id": 2,
+            "time": 0,
+            "type": "guide",
+            "text": "원목·광석·식재료를 모아 음식과 세 종류의 장비를 준비하세요."
+          },
+          {
+            "id": 3,
+            "time": 0,
+            "type": "equip",
+            "text": "구리 사냥창 장착"
+          },
+          {
+            "id": 4,
+            "time": 0,
+            "type": "equip",
+            "text": "해안 가죽옷 장착"
+          },
+          {
+            "id": 5,
+            "time": 0,
+            "type": "equip",
+            "text": "조약돌 부적 장착"
+          },
+          {
+            "id": 6,
+            "time": 0,
+            "type": "explore",
+            "text": "서릿바람 해안 첫 돌파 시작"
+          },
+          {
+            "id": 7,
+            "time": 8000,
+            "type": "battle",
+            "text": "조우: 해안 눈빛 늑대"
+          }
+        ],
+        "eventSequence": 7,
+        "actionSequence": 1,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {},
+          "consumed": {
+            "rime-shore-food": 1
+          },
+          "lost": {},
+          "raids": 0,
+          "defenseWins": 0,
+          "defenseLosses": 0,
+          "explorationWins": 0,
+          "explorationLosses": 0,
+          "interruptedMs": 0,
+          "offlinePausedMs": 0,
+          "workCycles": 0,
+          "tripsCompleted": 0
+        },
+        "completed": false,
+        "endingAt": null,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "254b8007"
+    },
+    "offlinePaused": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 10000,
+        "rng": 197721003,
+        "regionId": "rime-shore",
+        "unlockedRegions": [
+          "rime-shore"
+        ],
+        "clearedRegions": [],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 29,
+          "rime-shore-weapon": 1,
+          "rime-shore-armor": 1,
+          "rime-shore-charm": 1
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 0,
+            "level": 1
+          },
+          "mining": {
+            "xp": 0,
+            "level": 1
+          },
+          "foraging": {
+            "xp": 0,
+            "level": 1
+          },
+          "crafting": {
+            "xp": 0,
+            "level": 1
+          },
+          "cooking": {
+            "xp": 0,
+            "level": 1
+          },
+          "combat": {
+            "xp": 0,
+            "level": 1
+          },
+          "exploration": {
+            "xp": 0,
+            "level": 1
+          }
+        },
+        "equipment": {
+          "weapon": "rime-shore-weapon",
+          "armor": "rime-shore-armor",
+          "charm": "rime-shore-charm"
+        },
+        "hp": 128,
+        "activity": {
+          "type": "explore",
+          "id": "rime-shore",
+          "regionId": "rime-shore",
+          "encounters": 0,
+          "stage": "battle",
+          "progressMs": 0,
+          "durationMs": 8000,
+          "status": "offline-paused",
+          "repeat": false
+        },
+        "phase": "idle",
+        "battle": null,
+        "suspendedBattle": {
+          "id": 1,
+          "kind": "exploration",
+          "enemyId": "rime-shore-wolf",
+          "enemyHp": 52,
+          "enemyMaxHp": 52,
+          "startedAt": 8000,
+          "playerAttackMs": 2950,
+          "enemyAttackMs": 3250,
+          "nextPlayerAt": 10950,
+          "nextEnemyAt": 11250,
+          "nextActionAt": 10950,
+          "lastAction": null,
+          "turns": 0,
+          "playerTurns": 0,
+          "guardNext": false,
+          "remainingPlayerMs": 1950,
+          "remainingEnemyMs": 2250
+        },
+        "nextRaidAt": 300000,
+        "nextHealAt": 15000,
+        "recoveryUntil": null,
+        "pendingRaids": 0,
+        "lossBudget": null,
+        "autoFood": true,
+        "offlineBlocked": true,
+        "stopReason": null,
+        "events": [
+          {
+            "id": 1,
+            "time": 0,
+            "type": "story",
+            "text": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다."
+          },
+          {
+            "id": 2,
+            "time": 0,
+            "type": "guide",
+            "text": "원목·광석·식재료를 모아 음식과 세 종류의 장비를 준비하세요."
+          },
+          {
+            "id": 3,
+            "time": 0,
+            "type": "equip",
+            "text": "구리 사냥창 장착"
+          },
+          {
+            "id": 4,
+            "time": 0,
+            "type": "equip",
+            "text": "해안 가죽옷 장착"
+          },
+          {
+            "id": 5,
+            "time": 0,
+            "type": "equip",
+            "text": "조약돌 부적 장착"
+          },
+          {
+            "id": 6,
+            "time": 0,
+            "type": "explore",
+            "text": "서릿바람 해안 첫 돌파 시작"
+          },
+          {
+            "id": 7,
+            "time": 8000,
+            "type": "battle",
+            "text": "조우: 해안 눈빛 늑대"
+          },
+          {
+            "id": 8,
+            "time": 9000,
+            "type": "paused",
+            "text": "첫 돌파 탐험은 접속 중에 이어진다. 현재 전투와 이동 진행은 보존했다."
+          }
+        ],
+        "eventSequence": 8,
+        "actionSequence": 1,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {},
+          "consumed": {
+            "rime-shore-food": 1
+          },
+          "lost": {},
+          "raids": 0,
+          "defenseWins": 0,
+          "defenseLosses": 0,
+          "explorationWins": 0,
+          "explorationLosses": 0,
+          "interruptedMs": 0,
+          "offlinePausedMs": 1000,
+          "workCycles": 0,
+          "tripsCompleted": 0
+        },
+        "completed": false,
+        "endingAt": null,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "a773edd4"
+    },
+    "defending": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 9001,
+        "rng": 2198843221,
+        "regionId": "rime-shore",
+        "unlockedRegions": [
+          "rime-shore"
+        ],
+        "clearedRegions": [],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 29,
+          "rime-shore-weapon": 1,
+          "rime-shore-armor": 1,
+          "rime-shore-charm": 1
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 0,
+            "level": 1
+          },
+          "mining": {
+            "xp": 0,
+            "level": 1
+          },
+          "foraging": {
+            "xp": 0,
+            "level": 1
+          },
+          "crafting": {
+            "xp": 0,
+            "level": 1
+          },
+          "cooking": {
+            "xp": 0,
+            "level": 1
+          },
+          "combat": {
+            "xp": 0,
+            "level": 1
+          },
+          "exploration": {
+            "xp": 0,
+            "level": 1
+          }
+        },
+        "equipment": {
+          "weapon": "rime-shore-weapon",
+          "armor": "rime-shore-armor",
+          "charm": "rime-shore-charm"
+        },
+        "hp": 128,
+        "activity": {
+          "type": "explore",
+          "id": "rime-shore",
+          "regionId": "rime-shore",
+          "encounters": 0,
+          "stage": "battle",
+          "progressMs": 0,
+          "durationMs": 8000,
+          "status": "active",
+          "repeat": false
+        },
+        "phase": "defending",
+        "battle": {
+          "id": 2,
+          "kind": "raid",
+          "enemyId": "rime-shore-boar",
+          "enemyHp": 58,
+          "enemyMaxHp": 58,
+          "startedAt": 9001,
+          "playerAttackMs": 2950,
+          "enemyAttackMs": 3400,
+          "nextPlayerAt": 11951,
+          "nextEnemyAt": 12401,
+          "nextActionAt": 11951,
+          "lastAction": null,
+          "turns": 0,
+          "playerTurns": 0,
+          "guardNext": false
+        },
+        "suspendedBattle": {
+          "id": 1,
+          "kind": "exploration",
+          "enemyId": "rime-shore-wolf",
+          "enemyHp": 52,
+          "enemyMaxHp": 52,
+          "startedAt": 8000,
+          "playerAttackMs": 2950,
+          "enemyAttackMs": 3250,
+          "nextPlayerAt": 10950,
+          "nextEnemyAt": 11250,
+          "nextActionAt": 10950,
+          "lastAction": null,
+          "turns": 0,
+          "playerTurns": 0,
+          "guardNext": false,
+          "remainingPlayerMs": 1949,
+          "remainingEnemyMs": 2249
+        },
+        "nextRaidAt": 309001,
+        "nextHealAt": 10000,
+        "recoveryUntil": null,
+        "pendingRaids": 0,
+        "lossBudget": null,
+        "autoFood": true,
+        "offlineBlocked": false,
+        "stopReason": null,
+        "events": [
+          {
+            "id": 1,
+            "time": 0,
+            "type": "story",
+            "text": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다."
+          },
+          {
+            "id": 2,
+            "time": 0,
+            "type": "guide",
+            "text": "원목·광석·식재료를 모아 음식과 세 종류의 장비를 준비하세요."
+          },
+          {
+            "id": 3,
+            "time": 0,
+            "type": "equip",
+            "text": "구리 사냥창 장착"
+          },
+          {
+            "id": 4,
+            "time": 0,
+            "type": "equip",
+            "text": "해안 가죽옷 장착"
+          },
+          {
+            "id": 5,
+            "time": 0,
+            "type": "equip",
+            "text": "조약돌 부적 장착"
+          },
+          {
+            "id": 6,
+            "time": 0,
+            "type": "explore",
+            "text": "서릿바람 해안 첫 돌파 시작"
+          },
+          {
+            "id": 7,
+            "time": 8000,
+            "type": "battle",
+            "text": "조우: 해안 눈빛 늑대"
+          },
+          {
+            "id": 8,
+            "time": 9001,
+            "type": "battle",
+            "text": "수비: 해안 거친 멧돼지"
+          },
+          {
+            "id": 9,
+            "time": 9001,
+            "type": "raid",
+            "text": "서릿바람 해안에 습격이 닥쳤다. 진행 중인 활동을 보존하고 수비한다."
+          }
+        ],
+        "eventSequence": 9,
+        "actionSequence": 2,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {},
+          "consumed": {
+            "rime-shore-food": 1
+          },
+          "lost": {},
+          "raids": 1,
+          "defenseWins": 0,
+          "defenseLosses": 0,
+          "explorationWins": 0,
+          "explorationLosses": 0,
+          "interruptedMs": 0,
+          "offlinePausedMs": 0,
+          "workCycles": 0,
+          "tripsCompleted": 0
+        },
+        "completed": false,
+        "endingAt": null,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "4e398cfb"
+    },
+    "recovering": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 9002,
+        "rng": 1463608234,
+        "regionId": "rime-shore",
+        "unlockedRegions": [
+          "rime-shore"
+        ],
+        "clearedRegions": [],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 26,
+          "rime-shore-weapon": 1,
+          "rime-shore-armor": 1,
+          "rime-shore-charm": 1
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 0,
+            "level": 1
+          },
+          "mining": {
+            "xp": 0,
+            "level": 1
+          },
+          "foraging": {
+            "xp": 0,
+            "level": 1
+          },
+          "crafting": {
+            "xp": 0,
+            "level": 1
+          },
+          "cooking": {
+            "xp": 0,
+            "level": 1
+          },
+          "combat": {
+            "xp": 0,
+            "level": 1
+          },
+          "exploration": {
+            "xp": 0,
+            "level": 1
+          }
+        },
+        "equipment": {
+          "weapon": "rime-shore-weapon",
+          "armor": "rime-shore-armor",
+          "charm": "rime-shore-charm"
+        },
+        "hp": 1,
+        "activity": {
+          "type": "explore",
+          "id": "rime-shore",
+          "regionId": "rime-shore",
+          "encounters": 0,
+          "stage": "battle",
+          "progressMs": 0,
+          "durationMs": 8000,
+          "status": "active",
+          "repeat": false
+        },
+        "phase": "recovering",
+        "battle": null,
+        "suspendedBattle": {
+          "id": 1,
+          "kind": "exploration",
+          "enemyId": "rime-shore-wolf",
+          "enemyHp": 52,
+          "enemyMaxHp": 52,
+          "startedAt": 8000,
+          "playerAttackMs": 2950,
+          "enemyAttackMs": 3250,
+          "nextPlayerAt": 10950,
+          "nextEnemyAt": 11250,
+          "nextActionAt": 10950,
+          "lastAction": null,
+          "turns": 0,
+          "playerTurns": 0,
+          "guardNext": false,
+          "remainingPlayerMs": 1949,
+          "remainingEnemyMs": 2249
+        },
+        "nextRaidAt": 309001,
+        "nextHealAt": 10000,
+        "recoveryUntil": 39002,
+        "pendingRaids": 0,
+        "lossBudget": {
+          "startedAt": 9002,
+          "remaining": 21,
+          "items": {
+            "rime-shore-wood": 0,
+            "rime-shore-ore": 0,
+            "rime-shore-herb": 0,
+            "rime-shore-raw": 0,
+            "rime-shore-hide": 0,
+            "rime-shore-stone": 0,
+            "rime-shore-plank": 0,
+            "rime-shore-ingot": 0,
+            "rime-shore-food": 4,
+            "pinewood-wood": 0,
+            "pinewood-ore": 0,
+            "pinewood-herb": 0,
+            "pinewood-raw": 0,
+            "pinewood-hide": 0,
+            "pinewood-stone": 0,
+            "pinewood-plank": 0,
+            "pinewood-ingot": 0,
+            "pinewood-food": 0,
+            "frozen-lake-wood": 0,
+            "frozen-lake-ore": 0,
+            "frozen-lake-herb": 0,
+            "frozen-lake-raw": 0,
+            "frozen-lake-hide": 0,
+            "frozen-lake-stone": 0,
+            "frozen-lake-plank": 0,
+            "frozen-lake-ingot": 0,
+            "frozen-lake-food": 0,
+            "black-bog-wood": 0,
+            "black-bog-ore": 0,
+            "black-bog-herb": 0,
+            "black-bog-raw": 0,
+            "black-bog-hide": 0,
+            "black-bog-stone": 0,
+            "black-bog-plank": 0,
+            "black-bog-ingot": 0,
+            "black-bog-food": 0,
+            "knife-mountains-wood": 0,
+            "knife-mountains-ore": 0,
+            "knife-mountains-herb": 0,
+            "knife-mountains-raw": 0,
+            "knife-mountains-hide": 0,
+            "knife-mountains-stone": 0,
+            "knife-mountains-plank": 0,
+            "knife-mountains-ingot": 0,
+            "knife-mountains-food": 0,
+            "aurora-ruins-wood": 0,
+            "aurora-ruins-ore": 0,
+            "aurora-ruins-herb": 0,
+            "aurora-ruins-raw": 0,
+            "aurora-ruins-hide": 0,
+            "aurora-ruins-stone": 0,
+            "aurora-ruins-plank": 0,
+            "aurora-ruins-ingot": 0,
+            "aurora-ruins-food": 0
+          }
+        },
+        "autoFood": true,
+        "offlineBlocked": false,
+        "stopReason": null,
+        "events": [
+          {
+            "id": 1,
+            "time": 0,
+            "type": "story",
+            "text": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다."
+          },
+          {
+            "id": 2,
+            "time": 0,
+            "type": "guide",
+            "text": "원목·광석·식재료를 모아 음식과 세 종류의 장비를 준비하세요."
+          },
+          {
+            "id": 3,
+            "time": 0,
+            "type": "equip",
+            "text": "구리 사냥창 장착"
+          },
+          {
+            "id": 4,
+            "time": 0,
+            "type": "equip",
+            "text": "해안 가죽옷 장착"
+          },
+          {
+            "id": 5,
+            "time": 0,
+            "type": "equip",
+            "text": "조약돌 부적 장착"
+          },
+          {
+            "id": 6,
+            "time": 0,
+            "type": "explore",
+            "text": "서릿바람 해안 첫 돌파 시작"
+          },
+          {
+            "id": 7,
+            "time": 8000,
+            "type": "battle",
+            "text": "조우: 해안 눈빛 늑대"
+          },
+          {
+            "id": 8,
+            "time": 9001,
+            "type": "battle",
+            "text": "수비: 해안 거친 멧돼지"
+          },
+          {
+            "id": 9,
+            "time": 9001,
+            "type": "raid",
+            "text": "서릿바람 해안에 습격이 닥쳤다. 진행 중인 활동을 보존하고 수비한다."
+          },
+          {
+            "id": 10,
+            "time": 9002,
+            "type": "defeat",
+            "text": "수비 패배. 일반 재료·보급 3개 손실. 숙련·장비·해금은 보존된다."
+          },
+          {
+            "id": 11,
+            "time": 9002,
+            "type": "recovery",
+            "text": "30초 동안 자동 회복한 뒤 보존한 활동을 재개한다."
+          }
+        ],
+        "eventSequence": 11,
+        "actionSequence": 3,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {},
+          "consumed": {
+            "rime-shore-food": 1
+          },
+          "lost": {
+            "rime-shore-food": 3
+          },
+          "raids": 1,
+          "defenseWins": 0,
+          "defenseLosses": 1,
+          "explorationWins": 0,
+          "explorationLosses": 0,
+          "interruptedMs": 1,
+          "offlinePausedMs": 0,
+          "workCycles": 0,
+          "tripsCompleted": 0
+        },
+        "completed": false,
+        "endingAt": null,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "afa11915"
+    },
+    "completed": {
+      "game": "northward-idle",
+      "schemaVersion": 2,
+      "savedAt": 123456789,
+      "state": {
+        "schemaVersion": 2,
+        "time": 5492000,
+        "rng": 3892746553,
+        "regionId": "aurora-ruins",
+        "unlockedRegions": [
+          "rime-shore",
+          "pinewood",
+          "frozen-lake",
+          "black-bog",
+          "knife-mountains",
+          "aurora-ruins"
+        ],
+        "clearedRegions": [
+          "rime-shore",
+          "pinewood",
+          "frozen-lake",
+          "black-bog",
+          "knife-mountains",
+          "aurora-ruins"
+        ],
+        "inventory": {
+          "starter-spear": 1,
+          "starter-coat": 1,
+          "starter-charm": 1,
+          "rime-shore-food": 14,
+          "rime-shore-raw": 12,
+          "rime-shore-hide": 3,
+          "rime-shore-wood": 17,
+          "rime-shore-herb": 0,
+          "rime-shore-ore": 6,
+          "rime-shore-stone": 2,
+          "rime-shore-ingot": 0,
+          "rime-shore-plank": 0,
+          "rime-shore-weapon": 1,
+          "rime-shore-armor": 1,
+          "rime-shore-charm": 1,
+          "rime-shore-trophy": 1,
+          "pinewood-raw": 12,
+          "pinewood-hide": 6,
+          "pinewood-wood": 25,
+          "pinewood-herb": 0,
+          "pinewood-food": 20,
+          "pinewood-ore": 6,
+          "pinewood-stone": 2,
+          "pinewood-ingot": 0,
+          "pinewood-plank": 0,
+          "pinewood-weapon": 1,
+          "pinewood-armor": 1,
+          "pinewood-charm": 1,
+          "pinewood-trophy": 1,
+          "frozen-lake-raw": 14,
+          "frozen-lake-hide": 7,
+          "frozen-lake-wood": 25,
+          "frozen-lake-herb": 0,
+          "frozen-lake-food": 19,
+          "frozen-lake-ore": 6,
+          "frozen-lake-stone": 2,
+          "frozen-lake-ingot": 0,
+          "frozen-lake-plank": 0,
+          "frozen-lake-weapon": 1,
+          "frozen-lake-armor": 1,
+          "frozen-lake-charm": 1,
+          "frozen-lake-trophy": 1,
+          "black-bog-raw": 16,
+          "black-bog-hide": 8,
+          "black-bog-wood": 25,
+          "black-bog-herb": 0,
+          "black-bog-food": 18,
+          "black-bog-ore": 6,
+          "black-bog-stone": 2,
+          "black-bog-ingot": 0,
+          "black-bog-plank": 0,
+          "black-bog-weapon": 1,
+          "black-bog-armor": 1,
+          "black-bog-charm": 1,
+          "black-bog-trophy": 1,
+          "knife-mountains-raw": 18,
+          "knife-mountains-hide": 9,
+          "knife-mountains-wood": 25,
+          "knife-mountains-herb": 0,
+          "knife-mountains-food": 17,
+          "knife-mountains-ore": 6,
+          "knife-mountains-stone": 2,
+          "knife-mountains-ingot": 0,
+          "knife-mountains-plank": 0,
+          "knife-mountains-weapon": 1,
+          "knife-mountains-armor": 1,
+          "knife-mountains-charm": 1,
+          "knife-mountains-trophy": 1,
+          "aurora-ruins-raw": 18,
+          "aurora-ruins-hide": 9,
+          "aurora-ruins-wood": 25,
+          "aurora-ruins-herb": 0,
+          "aurora-ruins-food": 18,
+          "aurora-ruins-ore": 6,
+          "aurora-ruins-stone": 2,
+          "aurora-ruins-ingot": 0,
+          "aurora-ruins-plank": 0,
+          "aurora-ruins-weapon": 1,
+          "aurora-ruins-armor": 1,
+          "aurora-ruins-charm": 1,
+          "aurora-ruins-trophy": 1
+        },
+        "skills": {
+          "woodcutting": {
+            "xp": 4122,
+            "level": 13
+          },
+          "mining": {
+            "xp": 1134,
+            "level": 7
+          },
+          "foraging": {
+            "xp": 3006,
+            "level": 11
+          },
+          "crafting": {
+            "xp": 5040,
+            "level": 15
+          },
+          "cooking": {
+            "xp": 3984,
+            "level": 13
+          },
+          "combat": {
+            "xp": 5082,
+            "level": 15
+          },
+          "exploration": {
+            "xp": 3570,
+            "level": 12
+          }
+        },
+        "equipment": {
+          "weapon": "aurora-ruins-weapon",
+          "armor": "aurora-ruins-armor",
+          "charm": "aurora-ruins-charm"
+        },
+        "hp": 157,
+        "activity": null,
+        "phase": "idle",
+        "battle": null,
+        "suspendedBattle": null,
+        "nextRaidAt": 5610000,
+        "nextHealAt": 5495000,
+        "recoveryUntil": null,
+        "pendingRaids": 0,
+        "lossBudget": null,
+        "autoFood": true,
+        "offlineBlocked": false,
+        "stopReason": "활동을 중지하고 안전한 곳으로 귀환했다.",
+        "events": [
+          {
+            "id": 518,
+            "time": 4878600,
+            "type": "craft",
+            "text": "극광 만찬 요리 완료"
+          },
+          {
+            "id": 519,
+            "time": 4878600,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 520,
+            "time": 4879000,
+            "type": "activity",
+            "text": "별철 광석 채광 시작"
+          },
+          {
+            "id": 521,
+            "time": 4906288,
+            "type": "level",
+            "text": "채광 숙련 7 달성"
+          },
+          {
+            "id": 522,
+            "time": 4934000,
+            "type": "stop",
+            "text": "활동을 중지하고 안전한 곳으로 귀환했다."
+          },
+          {
+            "id": 523,
+            "time": 4934000,
+            "type": "activity",
+            "text": "별철 주괴 제련 시작"
+          },
+          {
+            "id": 524,
+            "time": 4935000,
+            "type": "battle",
+            "text": "수비: 유적 눈빛 늑대"
+          },
+          {
+            "id": 525,
+            "time": 4935000,
+            "type": "raid",
+            "text": "북극광 유적에 습격이 닥쳤다. 진행 중인 활동을 보존하고 수비한다."
+          },
+          {
+            "id": 526,
+            "time": 4947950,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 527,
+            "time": 4960900,
+            "type": "food",
+            "text": "청어 구이으로 체력을 회복했다."
+          },
+          {
+            "id": 528,
+            "time": 4960900,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 529,
+            "time": 4960900,
+            "type": "victory",
+            "text": "유적 눈빛 늑대을 막아냈다."
+          },
+          {
+            "id": 530,
+            "time": 4976300,
+            "type": "craft",
+            "text": "별철 주괴 제련 완료"
+          },
+          {
+            "id": 531,
+            "time": 4992700,
+            "type": "craft",
+            "text": "별철 주괴 제련 완료"
+          },
+          {
+            "id": 532,
+            "time": 4992700,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 533,
+            "time": 4993000,
+            "type": "activity",
+            "text": "고대 판재 가공 시작"
+          },
+          {
+            "id": 534,
+            "time": 5008580,
+            "type": "craft",
+            "text": "고대 판재 가공 완료"
+          },
+          {
+            "id": 535,
+            "time": 5024160,
+            "type": "craft",
+            "text": "고대 판재 가공 완료"
+          },
+          {
+            "id": 536,
+            "time": 5024160,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 537,
+            "time": 5025000,
+            "type": "activity",
+            "text": "별철 수호창 제작 시작"
+          },
+          {
+            "id": 538,
+            "time": 5057800,
+            "type": "level",
+            "text": "제작 숙련 14 달성"
+          },
+          {
+            "id": 539,
+            "time": 5057800,
+            "type": "craft",
+            "text": "별철 수호창 제작 완료"
+          },
+          {
+            "id": 540,
+            "time": 5057800,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 541,
+            "time": 5058000,
+            "type": "equip",
+            "text": "별철 수호창 장착"
+          },
+          {
+            "id": 542,
+            "time": 5058000,
+            "type": "activity",
+            "text": "별철 광석 채광 시작"
+          },
+          {
+            "id": 543,
+            "time": 5085000,
+            "type": "stop",
+            "text": "활동을 중지하고 안전한 곳으로 귀환했다."
+          },
+          {
+            "id": 544,
+            "time": 5085000,
+            "type": "activity",
+            "text": "별철 주괴 제련 시작"
+          },
+          {
+            "id": 545,
+            "time": 5101100,
+            "type": "craft",
+            "text": "별철 주괴 제련 완료"
+          },
+          {
+            "id": 546,
+            "time": 5101100,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 547,
+            "time": 5102000,
+            "type": "activity",
+            "text": "고대 판재 가공 시작"
+          },
+          {
+            "id": 548,
+            "time": 5117295,
+            "type": "craft",
+            "text": "고대 판재 가공 완료"
+          },
+          {
+            "id": 549,
+            "time": 5117295,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 550,
+            "time": 5118000,
+            "type": "activity",
+            "text": "극광 수호갑옷 제작 시작"
+          },
+          {
+            "id": 551,
+            "time": 5151810,
+            "type": "craft",
+            "text": "극광 수호갑옷 제작 완료"
+          },
+          {
+            "id": 552,
+            "time": 5151810,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 553,
+            "time": 5152000,
+            "type": "equip",
+            "text": "극광 수호갑옷 장착"
+          },
+          {
+            "id": 554,
+            "time": 5152000,
+            "type": "activity",
+            "text": "고대 거목 조각 벌목 시작"
+          },
+          {
+            "id": 555,
+            "time": 5160000,
+            "type": "battle",
+            "text": "수비: 유적 눈빛 늑대"
+          },
+          {
+            "id": 556,
+            "time": 5160000,
+            "type": "raid",
+            "text": "북극광 유적에 습격이 닥쳤다. 진행 중인 활동을 보존하고 수비한다."
+          },
+          {
+            "id": 557,
+            "time": 5172750,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 558,
+            "time": 5178800,
+            "type": "victory",
+            "text": "유적 눈빛 늑대을 막아냈다."
+          },
+          {
+            "id": 559,
+            "time": 5238000,
+            "type": "stop",
+            "text": "활동을 중지하고 안전한 곳으로 귀환했다."
+          },
+          {
+            "id": 560,
+            "time": 5238000,
+            "type": "activity",
+            "text": "고대 판재 가공 시작"
+          },
+          {
+            "id": 561,
+            "time": 5253295,
+            "type": "craft",
+            "text": "고대 판재 가공 완료"
+          },
+          {
+            "id": 562,
+            "time": 5253295,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 563,
+            "time": 5254000,
+            "type": "activity",
+            "text": "봉화의 심장 제작 시작"
+          },
+          {
+            "id": 564,
+            "time": 5278955,
+            "type": "level",
+            "text": "제작 숙련 15 달성"
+          },
+          {
+            "id": 565,
+            "time": 5278955,
+            "type": "craft",
+            "text": "봉화의 심장 제작 완료"
+          },
+          {
+            "id": 566,
+            "time": 5278955,
+            "type": "stop",
+            "text": "지정한 제작을 모두 마쳤다."
+          },
+          {
+            "id": 567,
+            "time": 5279000,
+            "type": "equip",
+            "text": "봉화의 심장 장착"
+          },
+          {
+            "id": 568,
+            "time": 5279000,
+            "type": "explore",
+            "text": "북극광 유적 첫 돌파 시작"
+          },
+          {
+            "id": 569,
+            "time": 5294500,
+            "type": "battle",
+            "text": "조우: 유적 북방 불곰"
+          },
+          {
+            "id": 570,
+            "time": 5306600,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 571,
+            "time": 5316650,
+            "type": "victory",
+            "text": "유적 북방 불곰을 넘어섰다."
+          },
+          {
+            "id": 572,
+            "time": 5329050,
+            "type": "battle",
+            "text": "조우: 유적 눈빛 늑대"
+          },
+          {
+            "id": 573,
+            "time": 5341800,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 574,
+            "time": 5344500,
+            "type": "level",
+            "text": "전투 숙련 14 달성"
+          },
+          {
+            "id": 575,
+            "time": 5344500,
+            "type": "victory",
+            "text": "유적 눈빛 늑대을 넘어섰다."
+          },
+          {
+            "id": 576,
+            "time": 5356900,
+            "type": "battle",
+            "text": "조우: 유적 눈빛 늑대"
+          },
+          {
+            "id": 577,
+            "time": 5369650,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 578,
+            "time": 5375700,
+            "type": "victory",
+            "text": "유적 눈빛 늑대을 넘어섰다."
+          },
+          {
+            "id": 579,
+            "time": 5375700,
+            "type": "level",
+            "text": "탐험 숙련 12 달성"
+          },
+          {
+            "id": 580,
+            "time": 5385000,
+            "type": "battle",
+            "text": "수비: 유적 북방 불곰"
+          },
+          {
+            "id": 581,
+            "time": 5385000,
+            "type": "raid",
+            "text": "북극광 유적에 습격이 닥쳤다. 진행 중인 활동을 보존하고 수비한다."
+          },
+          {
+            "id": 582,
+            "time": 5397100,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 583,
+            "time": 5407150,
+            "type": "food",
+            "text": "청어 구이으로 체력을 회복했다."
+          },
+          {
+            "id": 584,
+            "time": 5407150,
+            "type": "victory",
+            "text": "유적 북방 불곰을 막아냈다."
+          },
+          {
+            "id": 585,
+            "time": 5409940,
+            "type": "battle",
+            "text": "조우: 유적 북방 불곰"
+          },
+          {
+            "id": 586,
+            "time": 5422040,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 587,
+            "time": 5432090,
+            "type": "victory",
+            "text": "유적 북방 불곰을 넘어섰다."
+          },
+          {
+            "id": 588,
+            "time": 5444180,
+            "type": "battle",
+            "text": "돌파: 폭주한 봉화 수호자"
+          },
+          {
+            "id": 589,
+            "time": 5456280,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 590,
+            "time": 5469030,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 591,
+            "time": 5472380,
+            "type": "food",
+            "text": "극광 만찬으로 체력을 회복했다."
+          },
+          {
+            "id": 592,
+            "time": 5481780,
+            "type": "skill",
+            "text": "연속 찌르기 발동"
+          },
+          {
+            "id": 593,
+            "time": 5491180,
+            "type": "level",
+            "text": "전투 숙련 15 달성"
+          },
+          {
+            "id": 594,
+            "time": 5491180,
+            "type": "victory",
+            "text": "폭주한 봉화 수호자을 넘어섰다."
+          },
+          {
+            "id": 595,
+            "time": 5491180,
+            "type": "clear",
+            "text": "수호자의 폭주를 멈추고 여섯 봉화를 연결했다. 짐승들은 북쪽 보금자리로 돌아가고, 마을마다 따뜻한 불이 켜진다. 당신의 북방 여정은 끝났지만 길을 지키는 일은 계속된다."
+          },
+          {
+            "id": 596,
+            "time": 5491180,
+            "type": "ending",
+            "text": "수호자의 빛이 바른 방향을 되찾았다. 한 사람이 이어온 길 위에 다시 삶이 흐른다. 이제 이전 지역을 탐험하고 모든 제작과 수집을 완성할 수 있다."
+          },
+          {
+            "id": 597,
+            "time": 5492000,
+            "type": "stop",
+            "text": "활동을 중지하고 안전한 곳으로 귀환했다."
+          }
+        ],
+        "eventSequence": 597,
+        "actionSequence": 588,
+        "combatStyle": "balanced",
+        "totals": {
+          "produced": {
+            "rime-shore-raw": 36,
+            "rime-shore-hide": 11,
+            "rime-shore-wood": 36,
+            "rime-shore-herb": 9,
+            "rime-shore-food": 18,
+            "rime-shore-ore": 18,
+            "rime-shore-stone": 5,
+            "rime-shore-ingot": 6,
+            "rime-shore-plank": 8,
+            "rime-shore-weapon": 1,
+            "rime-shore-armor": 1,
+            "rime-shore-charm": 1,
+            "rime-shore-trophy": 1,
+            "pinewood-raw": 44,
+            "pinewood-hide": 14,
+            "pinewood-wood": 44,
+            "pinewood-herb": 11,
+            "pinewood-food": 24,
+            "pinewood-ore": 18,
+            "pinewood-stone": 5,
+            "pinewood-ingot": 6,
+            "pinewood-plank": 8,
+            "pinewood-weapon": 1,
+            "pinewood-armor": 1,
+            "pinewood-charm": 1,
+            "pinewood-trophy": 1,
+            "frozen-lake-raw": 46,
+            "frozen-lake-hide": 15,
+            "frozen-lake-wood": 44,
+            "frozen-lake-herb": 11,
+            "frozen-lake-food": 24,
+            "frozen-lake-ore": 18,
+            "frozen-lake-stone": 5,
+            "frozen-lake-ingot": 6,
+            "frozen-lake-plank": 8,
+            "frozen-lake-weapon": 1,
+            "frozen-lake-armor": 1,
+            "frozen-lake-charm": 1,
+            "frozen-lake-trophy": 1,
+            "black-bog-raw": 48,
+            "black-bog-hide": 16,
+            "black-bog-wood": 44,
+            "black-bog-herb": 11,
+            "black-bog-food": 24,
+            "black-bog-ore": 18,
+            "black-bog-stone": 5,
+            "black-bog-ingot": 6,
+            "black-bog-plank": 8,
+            "black-bog-weapon": 1,
+            "black-bog-armor": 1,
+            "black-bog-charm": 1,
+            "black-bog-trophy": 1,
+            "knife-mountains-raw": 50,
+            "knife-mountains-hide": 17,
+            "knife-mountains-wood": 44,
+            "knife-mountains-herb": 11,
+            "knife-mountains-food": 24,
+            "knife-mountains-ore": 18,
+            "knife-mountains-stone": 5,
+            "knife-mountains-ingot": 6,
+            "knife-mountains-plank": 8,
+            "knife-mountains-weapon": 1,
+            "knife-mountains-armor": 1,
+            "knife-mountains-charm": 1,
+            "knife-mountains-trophy": 1,
+            "aurora-ruins-raw": 50,
+            "aurora-ruins-hide": 17,
+            "aurora-ruins-wood": 44,
+            "aurora-ruins-herb": 11,
+            "aurora-ruins-food": 24,
+            "aurora-ruins-ore": 18,
+            "aurora-ruins-stone": 5,
+            "aurora-ruins-ingot": 6,
+            "aurora-ruins-plank": 8,
+            "aurora-ruins-weapon": 1,
+            "aurora-ruins-armor": 1,
+            "aurora-ruins-charm": 1,
+            "aurora-ruins-trophy": 1
+          },
+          "consumed": {
+            "rime-shore-raw": 24,
+            "rime-shore-herb": 9,
+            "rime-shore-ore": 12,
+            "rime-shore-wood": 19,
+            "rime-shore-ingot": 6,
+            "rime-shore-plank": 8,
+            "rime-shore-hide": 8,
+            "rime-shore-stone": 3,
+            "rime-shore-food": 12,
+            "pinewood-raw": 32,
+            "pinewood-herb": 11,
+            "pinewood-ore": 12,
+            "pinewood-wood": 19,
+            "pinewood-ingot": 6,
+            "pinewood-plank": 8,
+            "pinewood-hide": 8,
+            "pinewood-stone": 3,
+            "pinewood-food": 4,
+            "frozen-lake-raw": 32,
+            "frozen-lake-herb": 11,
+            "frozen-lake-ore": 12,
+            "frozen-lake-wood": 19,
+            "frozen-lake-ingot": 6,
+            "frozen-lake-plank": 8,
+            "frozen-lake-hide": 8,
+            "frozen-lake-stone": 3,
+            "frozen-lake-food": 5,
+            "black-bog-raw": 32,
+            "black-bog-herb": 11,
+            "black-bog-ore": 12,
+            "black-bog-wood": 19,
+            "black-bog-ingot": 6,
+            "black-bog-plank": 8,
+            "black-bog-hide": 8,
+            "black-bog-stone": 3,
+            "black-bog-food": 6,
+            "knife-mountains-raw": 32,
+            "knife-mountains-herb": 11,
+            "knife-mountains-ore": 12,
+            "knife-mountains-wood": 19,
+            "knife-mountains-ingot": 6,
+            "knife-mountains-plank": 8,
+            "knife-mountains-hide": 8,
+            "knife-mountains-stone": 3,
+            "knife-mountains-food": 7,
+            "aurora-ruins-raw": 32,
+            "aurora-ruins-herb": 11,
+            "aurora-ruins-ore": 12,
+            "aurora-ruins-wood": 19,
+            "aurora-ruins-ingot": 6,
+            "aurora-ruins-plank": 8,
+            "aurora-ruins-hide": 8,
+            "aurora-ruins-stone": 3,
+            "aurora-ruins-food": 6
+          },
+          "lost": {},
+          "raids": 21,
+          "defenseWins": 21,
+          "defenseLosses": 0,
+          "explorationWins": 28,
+          "explorationLosses": 0,
+          "interruptedMs": 447200,
+          "offlinePausedMs": 0,
+          "workCycles": 235,
+          "tripsCompleted": 6
+        },
+        "completed": true,
+        "endingAt": 5491180,
+        "createdAt": 0
+      },
+      "pendingSummary": null,
+      "writerId": "legacy-fixture",
+      "checksum": "e6a02277"
+    }
+  }
+}

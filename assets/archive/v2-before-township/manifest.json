@@ -1,0 +1,806 @@
+{
+  "version": 2,
+  "updatedAt": "2026-10-04",
+  "style": "Cute rounded polished 3D winter-survival illustration; expressive large eyes, blue and cream snow palette, warm orange details.",
+  "referenceGame": "Whiteout Survival official hero and game imagery, rendering/composition reference only",
+  "referenceSourcesPath": "artifacts/reference/wos/sources.json",
+  "previousVersionManifest": "assets/archive/v1/manifest.json",
+  "uniqueAssetCount": 12,
+  "uniqueDisplayBytes": 1807644,
+  "assets": [
+    {
+      "id": "hero",
+      "version": 2,
+      "role": "hero-portrait",
+      "regionId": null,
+      "path": "assets/images/v2/hero.webp",
+      "sourcePath": "assets/source/v2/hero.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "webp",
+      "bytes": 96088,
+      "sha256": "c47c025355377921486393ba64ec65ba1d4fee50d6f5cb8ebb8bfc13ab31acd1",
+      "sourceSha256": "381bbf270b25b2c74a9b9f6eaf82ad8dc3e90dd8dc2c20a43f49ae9b9b85e010",
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceTransparentFraction": 0.3368,
+      "sourceContentBounds": [
+        0,
+        0,
+        1246,
+        1254
+      ],
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept. Create one completely new original game portrait on a true transparent alpha background. Reference images are rendering-style guides only, never copy their identities, hair, costume, helmet or gadgets. Match their polished cute 3D mobile winter-survival game illustration: softly rounded forms, plump appealing proportions, large expressive glossy eyes, gentle volumetric shading, soft material textures, bright sky-blue accents, warm cream highlights. No ink outlines, no angular cel shading, no flat vector look. Square head-and-upper-chest portrait, all ears and headwear inside canvas with 8% space above and on sides, head prominent, shoulders contained, no text, no scenery, no frame, no drop shadow outside silhouette. Subject: an original cheerful northern explorer, a young adult woman with a short chestnut wavy bob, rounded cheeks and large amber eyes, a sky-blue knitted beanie with a small cream pompom, a blue padded winter coat with a cream fleece collar and a small apricot-orange scarf. Friendly determined smile; simple uncluttered silhouette. She is not any existing WOS hero. Show upper chest only, no hands or weapons.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "rendering style only; not shipped/copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          },
+          {
+            "path": "artifacts/reference/wos/molly.png",
+            "role": "rendering style only; not shipped/copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png"
+          }
+        ],
+        "referenceSources": [],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-6916e980-f669-4d32-9a94-bfeb9e5dadbd.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "bear",
+      "version": 2,
+      "role": "monster-portrait",
+      "regionId": null,
+      "path": "assets/images/v2/bear.webp",
+      "sourcePath": "assets/source/v2/bear.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "webp",
+      "bytes": 96766,
+      "sha256": "b04910d2e87e3146e4f60c28c6fcd675b91de5323a4939a0a6140763492d7974",
+      "sourceSha256": "d8681c3a758d0cea9dc5c8a392f05a4e34b30a6b0c37cf0fd2afc137a3a95dd5",
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceTransparentFraction": 0.27695,
+      "sourceContentBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept. Create one completely new original game portrait on a true transparent alpha background. Reference images are rendering-style guides only, never copy their identities, hair, costume, helmet or gadgets. Match their polished cute 3D mobile winter-survival game illustration: softly rounded forms, plump appealing proportions, large expressive glossy eyes, gentle volumetric shading, soft material textures, bright sky-blue accents, warm cream highlights. No ink outlines, no angular cel shading, no flat vector look. Square head-and-upper-chest portrait, all ears and headwear inside canvas with 8% space above and on sides, head prominent, shoulders contained, no text, no scenery, no frame, no drop shadow outside silhouette. Subject: a cute sturdy real brown bear's head and upper shoulders, small round ears, broad short muzzle, soft dark nose, rounded forehead, large warm dark eyes and plush cinnamon-brown coat with cream muzzle. Animal anatomy and bear silhouette must stay recognizable. Mildly determined friendly expression, closed mouth, no clothes, no humanoid body, no fantasy horns.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "rendering style only; not shipped/copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          },
+          {
+            "path": "artifacts/reference/wos/molly.png",
+            "role": "rendering style only; not shipped/copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png"
+          }
+        ],
+        "referenceSources": [],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-af251c3d-697c-47fd-9077-a7a4a8dd95f2.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "wolf",
+      "version": 2,
+      "role": "monster-portrait",
+      "regionId": null,
+      "path": "assets/images/v2/wolf.webp",
+      "sourcePath": "assets/source/v2/wolf.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "webp",
+      "bytes": 101052,
+      "sha256": "62f538aa2e801a8d25f945a5304b30d900219b176cce36df8c13530e58721a5e",
+      "sourceSha256": "eb9c581858d9c6ac521e0c1ba2fb7d31a462287ab86b81a8fb40eb1f09b7d57b",
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceTransparentFraction": 0.30992,
+      "sourceContentBounds": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute sturdy real northern gray wolf, round cheeks yet recognizable elongated wolf muzzle, triangular upright ears, charcoal nose, bright honey-colored eyes and soft gray plush coat with creamy white cheeks and chest. Alert friendly determined expression, mouth closed, natural wolf anatomy, no clothing or humanoid body.",
+        "referencedImages": [
+          {
+            "path": "assets/source/v2/hero.png",
+            "role": "v2 render/cute proportion style only; subject not copied",
+            "lineageAssetId": "hero"
+          },
+          {
+            "path": "assets/source/v2/bear.png",
+            "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+            "lineageAssetId": "bear"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          },
+          {
+            "path": "artifacts/reference/wos/molly.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-bcdc9e61-8090-4d3a-ac6f-3eba08528eb0.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "boar",
+      "version": 2,
+      "role": "monster-portrait",
+      "regionId": null,
+      "path": "assets/images/v2/boar.webp",
+      "sourcePath": "assets/source/v2/boar.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "webp",
+      "bytes": 103760,
+      "sha256": "e68948f32e1419066a30be362b9cda2ffb1168f83a9fec8e1b5bbac7f7b2a4f0",
+      "sourceSha256": "3f83f702c1d6c5087c958c773839a0357327d8708cb8a17c57c11eed16993781",
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceTransparentFraction": 0.35397,
+      "sourceContentBounds": [
+        0,
+        62,
+        1210,
+        1254
+      ],
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute plump real wild boar, short stout muzzle with a broad rounded dark-brown snout and two round nostrils, small pointed ears, tiny smooth ivory upward-curved tusks, brown plush coat and cream cheek accents. Big kind dark eyes and a compact fluffy forehead tuft, friendly determined expression. Preserve boar species anatomy; no clothing or humanoid body.",
+        "referencedImages": [
+          {
+            "path": "assets/source/v2/hero.png",
+            "role": "v2 render/cute proportion style only; subject not copied",
+            "lineageAssetId": "hero"
+          },
+          {
+            "path": "assets/source/v2/bear.png",
+            "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+            "lineageAssetId": "bear"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          },
+          {
+            "path": "artifacts/reference/wos/molly.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-02d90339-3fae-47c1-9005-9ba3110bbc35.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "stag",
+      "version": 2,
+      "role": "monster-portrait",
+      "regionId": null,
+      "path": "assets/images/v2/stag.webp",
+      "sourcePath": "assets/source/v2/stag.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "webp",
+      "bytes": 97272,
+      "sha256": "c517d885f79d8dbce625884863f946383d4f1a0bc124ca6849a7373deee342d9",
+      "sourceSha256": "03b805bd360756f0b510899613539a0f2809201ef9f84b81f64abbbcf5993da8",
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceTransparentFraction": 0.43704,
+      "sourceContentBounds": [
+        0,
+        8,
+        1230,
+        1254
+      ],
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute real northern red deer stag, soft tawny coat, cream long muzzle and chest, dark rounded nose, broad large ears, large kind honey eyes, a modest symmetrical pair of rounded branching antlers that fit comfortably inside canvas. Friendly calm expression, real deer species anatomy. No clothes or humanoid body.",
+        "referencedImages": [
+          {
+            "path": "assets/source/v2/hero.png",
+            "role": "v2 render/cute proportion style only; subject not copied",
+            "lineageAssetId": "hero"
+          },
+          {
+            "path": "assets/source/v2/bear.png",
+            "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+            "lineageAssetId": "bear"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          },
+          {
+            "path": "artifacts/reference/wos/molly.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-3105aa08-4d8b-4ceb-a613-83e227af4d93.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "guardian",
+      "version": 2,
+      "role": "monster-portrait",
+      "regionId": null,
+      "path": "assets/images/v2/guardian.webp",
+      "sourcePath": "assets/source/v2/guardian.png",
+      "dimensions": {
+        "width": 512,
+        "height": 512
+      },
+      "sourceDimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "format": "webp",
+      "bytes": 109196,
+      "sha256": "932e26ad668639182555714fce7ea5914897ece09b321081c8e84ae75a014672",
+      "sourceSha256": "76da93a09966960f39cc000adde3f7d83bf1defedfac4cd32a49cbaf6602364b",
+      "transparent": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "sourceTransparentFraction": 0.3165,
+      "sourceContentBounds": [
+        0,
+        3,
+        1254,
+        1254
+      ],
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute ancient northern stone guardian, rounded chunky blue-gray stone head and small upper shoulders, a few soft block shapes form a simple broken crown fully inside frame, large luminous turquoise eyes and a gentle determined face, slightly pudgy stone cheeks, a small cap of cream-white snow on crown. Sparse broad shallow stone seams, smooth stone materials, no armor or weapon. Clearly a magical stone creature rather than a human; all forms rounded and friendly.",
+        "referencedImages": [
+          {
+            "path": "assets/source/v2/hero.png",
+            "role": "v2 render/cute proportion style only; subject not copied",
+            "lineageAssetId": "hero"
+          },
+          {
+            "path": "assets/source/v2/bear.png",
+            "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+            "lineageAssetId": "bear"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          },
+          {
+            "path": "artifacts/reference/wos/molly.png",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+            "role": "indirect style lineage via v2 hero/bear only; not shipped"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-2b9fa25f-d214-460b-ba52-8d0fdb36925b.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "region-rime-shore",
+      "version": 2,
+      "role": "region-background",
+      "regionId": "rime-shore",
+      "path": "assets/images/v2/region-rime-shore.webp",
+      "sourcePath": "assets/source/v2/region-rime-shore.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 190238,
+      "sha256": "c6b17c9f20d86f4ea8414b4cb616bf5e573c186c17d13d6adcdecf85bcf1424a",
+      "sourceSha256": "65d59cd555419acb2f1a5a437815548586758f27d704a09c1f5a89e7a30a49b2",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: RIME SHORE — a snow-covered beach along a cold teal northern sea. Curved snowy shoreline on the right opening onto gently rippled turquoise-blue water, rounded dark shore rocks capped with soft snow, a small simple weathered lighthouse/beacon on the left upper side casting an amber glow, distant pale snowy island cliffs beyond the sea. Sparse tiny winter pines only at far left. A wide open white-blue snowbank/path in the central foreground. Coastal horizon and sea should dominate, very clearly a snowy BEACH, not a forest or mountain road.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-ea840551-7241-4115-b47f-89bd5cf05baf.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "region-pinewood",
+      "version": 2,
+      "role": "region-background",
+      "regionId": "pinewood",
+      "path": "assets/images/v2/region-pinewood.webp",
+      "sourcePath": "assets/source/v2/region-pinewood.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 222504,
+      "sha256": "370db71e00d887fdbeda72e1a58cddf11b6e2f708640e735c38a5350146b9abc",
+      "sourceSha256": "3e6547317249501593c01734b044cd4f479c9c2511be0f8075e8e2d29ac6ae41",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: PINEWOOD — deep blue-green snowy conifer forest. Tall softly rounded evergreens heavily draped with pillowy snow frame both sides. A curved broad open snowy woodland trail leads through the center to a cozy little wooden trail lantern on a rounded post, with amber glow. Layered teal pine foliage and tree trunks create a forest canopy and woodland depth; a few mossy rounded boulders along the side. Very clearly a dense WINTER FOREST, without a sea, giant lake, distant bare mountain panorama or ruins. The central snow trail stays uncluttered and usable as a game stage.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-d696b332-82ca-4b8b-b8da-d8106e440364.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "region-frozen-lake",
+      "version": 2,
+      "role": "region-background",
+      "regionId": "frozen-lake",
+      "path": "assets/images/v2/region-frozen-lake.webp",
+      "sourcePath": "assets/source/v2/region-frozen-lake.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 184230,
+      "sha256": "188e395ccd026890dfc2eb1f4b6a54a63c3c161603359f57f9e0e8dcd00dc141",
+      "sourceSha256": "a3d99fc21747d0c67a57e93244576f51569171b631a1bb72a89459d060064bb0",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: FROZEN LAKE — an expansive magical-blue frozen inland lake under a bright clear winter sky. Glassy light-turquoise and blue ice, softly snow-covered shore edges, distant low rolling snow hills, a few small snow-padded pines on distant banks. One simple dark oval ice fishing opening near the side, surrounded by a small neat rim of snow, no rods or people. The lower central lake is broad smooth open pale-blue ice with soft reflected highlights and very subtle shallow crack patterns, large usable empty game stage. The LAKE surface should dominate and be immediately distinguishable from a beach, mountain trail or forest.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-b91929ef-271c-40d8-a4c3-f90e3209c21c.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "region-black-bog",
+      "version": 2,
+      "role": "region-background",
+      "regionId": "black-bog",
+      "path": "assets/images/v2/region-black-bog.webp",
+      "sourcePath": "assets/source/v2/region-black-bog.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 228514,
+      "sha256": "c3d21a4bbe91bf89442366e9e148630d162856f6b9f8ee0de51dafcf34a07b5f",
+      "sourceSha256": "68dfad38d94e98a61c795bc3276592b7990eb8fc26be2eb090fb0f24c3fd3fe9",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: BLACK BOG — a friendly colorful NORTHERN PEAT WETLAND in winter, NOT a spooky swamp. Winding shallow teal-blue water channels among rounded small peat islands padded with snow, cheerful warm tan reeds, a few soft blue-green alder trees and willow branches at the sides. Thin pale-blue ice sheets along the water margins and a very light soft mist in the distance, while the foreground stays crisp and sunny. Warm amber light from a single small wooden marker lantern on an island at upper left. A broad smooth central snow-covered peat causeway crossing the lower middle stays open for later sprites. Maintain saturated pastel teal water, blue snow shadows and warm golden reeds; no horror, no black desaturated darkness, no angular faceted art.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-606c7200-ad3b-4812-a6b2-410493008d8a.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "region-knife-mountains",
+      "version": 2,
+      "role": "region-background",
+      "regionId": "knife-mountains",
+      "path": "assets/images/v2/region-knife-mountains.webp",
+      "sourcePath": "assets/source/v2/region-knife-mountains.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 196216,
+      "sha256": "21de5dec76c4924021c2417a445f5811bfd5b0993386ee2d2aab91c9da1e9e7b",
+      "sourceSha256": "8f09774185476e58a261e561bb54e595b92a08016223777d292edfb62c96faa3",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: KNIFE MOUNTAINS — a spectacular high snowy MOUNTAIN PASS. Huge rounded boulders padded with thick soft snow flank a wide open gently curving snow trail, beyond it towering blue and lavender snowy ridgelines make a distinctive alpine panorama. Clear cold bright sky with rounded clouds, a little powder drifting gently from the crest. One small amber beacon on a simple post beside the upper-side trail provides a warm navigation point. Very few tiny hardy pines far away. Large simple open central snow path for sprites, mountains and large rounded rocks provide the stage silhouette. Friendly and adventurous, never jagged razor-cut angular low-poly geometry.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-b077aefb-3f28-4ae2-a32b-4f015c1dfaca.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "region-aurora-ruins",
+      "version": 2,
+      "role": "region-background",
+      "regionId": "aurora-ruins",
+      "path": "assets/images/v2/region-aurora-ruins.webp",
+      "sourcePath": "assets/source/v2/region-aurora-ruins.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 181808,
+      "sha256": "4471b29cc74cdde1be38a93bbd1e155586ffdd9cf2b2ca834c68d0ae45f3e85e",
+      "sourceSha256": "285f4819ae40c7a5a715cc05001b522a4b57fb8365e1c7ed3effbfa4cc5c473e",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: AURORA RUINS — a whimsical peaceful ANCIENT SNOWY RUIN at the end of a northern fairy-tale adventure. Rounded pale stone columns, a curved ancient stone arch and a low circular ruin platform padded with plush snow, framing a broad clear central snowy courtyard. Exactly six small warm amber beacon lights are arranged around the ruin perimeter, each a simple squat stone lantern with a glowing flame/light, symbolizing the six completed beacons. A beautiful flowing green-teal-purple northern aurora sweeps across a bright blue twilight sky. Override the default daylight with luminous pastel blue hour, but keep the snow bright, cute, colorful and welcoming, with clear shadows rather than darkness. No sinister temple, no people, no guardian, no carved writing. A joyful safe ending place, softly rounded 3D, broad open center for sprites and HUD.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-570170fe-cbca-45cd-b2d7-453e616aadf3.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      }
+    },
+    {
+      "id": "landscape",
+      "version": 2,
+      "role": "background-alias",
+      "regionId": "rime-shore",
+      "path": "assets/images/v2/region-rime-shore.webp",
+      "sourcePath": "assets/source/v2/region-rime-shore.png",
+      "dimensions": {
+        "width": 1599,
+        "height": 900
+      },
+      "sourceDimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "bytes": 190238,
+      "sha256": "c6b17c9f20d86f4ea8414b4cb616bf5e573c186c17d13d6adcdecf85bcf1424a",
+      "sourceSha256": "65d59cd555419acb2f1a5a437815548586758f27d704a09c1f5a89e7a30a49b2",
+      "transparent": false,
+      "alphaRange": null,
+      "sourceTransparentFraction": 0,
+      "sourceContentBounds": null,
+      "generation": {
+        "tool": "built-in image_gen.imagegen",
+        "date": "2026-10-04",
+        "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: RIME SHORE — a snow-covered beach along a cold teal northern sea. Curved snowy shoreline on the right opening onto gently rippled turquoise-blue water, rounded dark shore rocks capped with soft snow, a small simple weathered lighthouse/beacon on the left upper side casting an amber glow, distant pale snowy island cliffs beyond the sea. Sparse tiny winter pines only at far left. A wide open white-blue snowbank/path in the central foreground. Coastal horizon and sea should dominate, very clearly a snowy BEACH, not a forest or mountain road.",
+        "referencedImages": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style-only: snowy mobile-game scenery; UI and characters not copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style-only: soft rounded 3D materials; character not copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "referenceSources": [
+          {
+            "path": "artifacts/reference/wos/exploration.webp",
+            "role": "style only; not shipped or copied",
+            "url": "https://play-lh.googleusercontent.com/Nza4IKOwzgTKYjjgTEmmbcCg-fysi2FgLXNHZbaa4tjn55bQwQW3dm4Zsks6IPqMNp-EO7NFoVE=w1600"
+          },
+          {
+            "path": "artifacts/reference/wos/jessie.png",
+            "role": "style only; not shipped or copied",
+            "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+          }
+        ],
+        "defaultToolSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-ea840551-7241-4115-b47f-89bd5cf05baf.png",
+        "identityPolicy": "Reference style only. New original subjects and scenes; no copied WOS characters, logos, screenshot UI or art files."
+      },
+      "export": {
+        "method": "Pillow LANCZOS downscale; exact alpha retained; WebP RGB quality 96 portraits/89 landscapes",
+        "script": "assets/export_art.py"
+      },
+      "aliasOf": "region-rime-shore"
+    }
+  ]
+}

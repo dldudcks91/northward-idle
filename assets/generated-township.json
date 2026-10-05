@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "id": "town-village",
+      "source": "C:\\Users\\Semi\\source\\repos\\northward-idle\\assets\\source\\township\\town-village.png",
+      "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-5047ac26-4d15-4879-89b7-91e14370fa46.png",
+      "date": "2026-10-05",
+      "role": "town-background",
+      "prompt": "Use case: stylized-concept.\nAsset type: one original 16:9 landscape background for a permanent northern village screen in a cute survival idle game.\nInput images: Image 1 (our snowy coast) and Image 2 (our aurora ruins) are rendering-material, soft lighting and blue/cream palette references only. Invent a different new village scene; do not reproduce either composition.\nPrimary request: a cozy permanent beacon village seen from an elevated three-quarter near-isometric camera, with clearly separated rounded buildings and snowy paths surrounding one modest amber beacon in a central circular stone plaza. Small blue-roof timber homes, a sturdy storehouse with crates, a workshop and forge with a little chimney, a lumber shed, a greenhouse for winter crops, a cooking lodge and small trading stall should read as different facilities. No characters or animals are required.\nScene/backdrop: quiet snow-filled mountain basin, soft distant blue mountains and a few frosted conifers framing the edges. Village buildings concentrated in the upper two-thirds and sides, an uncluttered pale blue snow approach in the lower central third. The central beacon stays compact, with open snow around it and ample clean spacing between facilities for real game buttons to be overlaid later by code.\nStyle/medium: match the supplied images' cute polished mobile-game 3D illustration, plush snow, gently rounded wood and stone, soft volumetric shading and appealing miniature proportions. No black ink outlines, flat vector look or angular cel shading.\nLighting/mood: bright calm winter daylight, soft sky-blue shadows, inviting warm amber windows, subtle warm beacon glow.\nColor palette: clean sky blue, turquoise accents, cream snow, warm timber and apricot-orange lights.\nComposition/framing: wide 16:9. Entire village is fully inside the frame. Clear facility silhouettes, broad winding paths, medium detail, no overcrowding, no overlapping roofs, no giant structure hiding the scene.\nConstraints: this is a pure background illustration. Absolutely no lettering, numerals, signs with text, logos, watermarks, borders, interface, button shapes, labels, markers or placeholder UI. Original scene only, no copied commercial screenshot or existing game's buildings.",
+      "tool": "built-in image_gen.imagegen",
+      "width": 1672,
+      "height": 941,
+      "sha256": "05435ae0ffda33b87273915c74304c477961bc7725369eff11e22017219fb9d5",
+      "refs": [
+        {
+          "path": "assets/images/v2/region-rime-shore.webp",
+          "role": "existing v2 soft 3D materials, snow palette and warm light only; new scene",
+          "lineageAssetId": "region-rime-shore",
+          "sha256": "c6b17c9f20d86f4ea8414b4cb616bf5e573c186c17d13d6adcdecf85bcf1424a"
+        },
+        {
+          "path": "assets/images/v2/region-aurora-ruins.webp",
+          "role": "existing v2 soft rounded stone and snow rendering only; new scene",
+          "lineageAssetId": "region-aurora-ruins",
+          "sha256": "4471b29cc74cdde1be38a93bbd1e155586ffdd9cf2b2ca834c68d0ae45f3e85e"
+        }
+      ],
+      "validation": {
+        "visualInspection": "Opened generated PNG before export. Central compact beacon, separate facility silhouettes, lower central snowy space. No lettering, UI, figures or animals.",
+        "targetRatio": "16:9",
+        "style": "Existing v2 rounded 3D winter game"
+      }
+    }
+  ]
+}

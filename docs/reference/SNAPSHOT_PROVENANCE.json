@@ -1,0 +1,94 @@
+{
+  "copiedOn": "2026-10-04",
+  "sourceProject": "thesevensimulationrpg",
+  "sourceDirectory": "docs/reference/melvoridle",
+  "note": "Content retained; unbundled relative links rendered as original-path text.",
+  "files": [
+    {
+      "file": "00_overview.md",
+      "originalSha256": "8ef839927a9ad7f44bfb813fdd4c90fe541050638e2af4447b23919a4e52fe60",
+      "snapshotSha256": "0605692782af951d1202112bcc74be1a01b2883f52bc902a8488b9276469338f",
+      "unbundledLinksRenderedAsText": [
+        "../dragoncliff/00_overview.md",
+        "WebSearch 스니펫",
+        "../idlechampions/02_items.md"
+      ]
+    },
+    {
+      "file": "01_skills.md",
+      "originalSha256": "be95a4131395b6fee98952dee5a93e0bc428ab4778aff308ec66fb5746628315",
+      "snapshotSha256": "484748ab76dd7b4f6e59a12bb748ff5d3bed83b28eb492f4ddd9e984a7caddc9",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "02_items.md",
+      "originalSha256": "e4f44fe1a17836f3ae481bd56e438b73d1e31bd9b00a2f113666bb9659d11487",
+      "snapshotSha256": "9a76ce036dd186e93c98e102063fae6a2d93d7589e21a2d873c0d2a5eb31212f",
+      "unbundledLinksRenderedAsText": [
+        "../aion/02_items.md#5-스티그마stigma--장비도-스킬도-아닌-제3의-슬롯",
+        "../aion/02_items.md#2-마석manastone--등급이-소켓-수를-직접-정한다",
+        "../aion/02_items.md#2-마석manastone--등급이-소켓-수를-직접-정한다",
+        "../aion/02_items.md#6-날개wing--등급-계단--기능전투스탯-겸용-슬롯",
+        "../idlechampions/02_items.md#2-세트-보너스-없음--3자-수렴의-네-번째-사례"
+      ]
+    },
+    {
+      "file": "03_township_buildings.md",
+      "originalSha256": "c037ff827ce310a0318b4477e2e9a3199eb72a927a40759abe66c07fab0d1047",
+      "snapshotSha256": "5c9ce48f81788c345ad27653cedc4a82d9888c360be7e2ae93eb287516548ced",
+      "unbundledLinksRenderedAsText": [
+        "../../game_design/construction_draft.md"
+      ]
+    },
+    {
+      "file": "04_construction_unlocks.md",
+      "originalSha256": "6b6e8ad87f03ab55cad96968d6db30145e972d277e7ecc87664abf8af146e13c",
+      "snapshotSha256": "2384b55849ba3852f4ad18a83b600cfa3a616571e022d7ff1db14991f164bc71",
+      "unbundledLinksRenderedAsText": [
+        "../../game_design/construction_draft.md"
+      ]
+    },
+    {
+      "file": "05_combat.md",
+      "originalSha256": "8ab2b4c0d0091ce58aa16d2077de38d683f148916238f6a3bb5bf203d67836b1",
+      "snapshotSha256": "757b19311aa2a300b47dcfe4a7b899825e3faf42e27bf8007f7a8694da01030a",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "06_level_design.md",
+      "originalSha256": "8c4bc6eca1322db7ece34fd62b6c62df46139fdd01508a8e6524e9ffd9586e73",
+      "snapshotSha256": "0b25f7f2bf4c3ec098373cf14477321969a7adf066c50544430286d461e2a51f",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "07_progression.md",
+      "originalSha256": "fd5aa1c54a76018b6d22214058d794665ec9803b49f209c5cb1a7114f93db288",
+      "snapshotSha256": "0bf77bead9470b5dc55fdd09a8d27650437c83f8f1540bf96f2885726f85255a",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "08_economy.md",
+      "originalSha256": "53e665f94f2fb8789fbaa30a6d6437b1fc570ba80ee16102d51720916a5a2877",
+      "snapshotSha256": "b57574ecac03e68be2edbc58b572a3eaf7c45ba4fe1d58e99a9f2fbc1feeadb4",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "09_screen_session.md",
+      "originalSha256": "8ef021ca08e7d3d61b8910a1f1ba52f3fc8fce4a6968e17d30c3bb94a2d32814",
+      "snapshotSha256": "1217c2fb172e1237a5b07b20beb29fe87a687eaea689315bd0c0e43b4258ff2d",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "10_reception_business.md",
+      "originalSha256": "d9041c51d2d5d7579647f2e1ca71d0eac19a5cfc71a2b371776087002ae684e1",
+      "snapshotSha256": "46e1859d14e407793b7c24692a8fcebf4b10ff819885425493c61fa087e615c4",
+      "unbundledLinksRenderedAsText": []
+    },
+    {
+      "file": "11_synthesis.md",
+      "originalSha256": "db5502ce9a25deb4b7a5d889ddc40a7b48834f7793761f28bc4bc1fcbde24c07",
+      "snapshotSha256": "38d42dcbd4d78f88a388df27c2806267ac1014d876960b048cd6b782fc0ff709",
+      "unbundledLinksRenderedAsText": []
+    }
+  ]
+}

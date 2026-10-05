@@ -1,0 +1,254 @@
+[
+  {
+    "id": "region-rime-shore",
+    "role": "region-background",
+    "regionId": "rime-shore",
+    "source": "C:/Users/Semi/source/repos/northward-idle/assets/source/v2/region-rime-shore.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: RIME SHORE — a snow-covered beach along a cold teal northern sea. Curved snowy shoreline on the right opening onto gently rippled turquoise-blue water, rounded dark shore rocks capped with soft snow, a small simple weathered lighthouse/beacon on the left upper side casting an amber glow, distant pale snowy island cliffs beyond the sea. Sparse tiny winter pines only at far left. A wide open white-blue snowbank/path in the central foreground. Coastal horizon and sea should dominate, very clearly a snowy BEACH, not a forest or mountain road.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-ea840551-7241-4115-b47f-89bd5cf05baf.png",
+    "referenceSources": [
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png"
+    ],
+    "transparentBackground": false,
+    "visualReview": "밝은 눈 해안, 차가운 청록 바다, 왼쪽 등대의 따뜻한 빛. 중앙 눈밭이 열려 있고 글자·UI·캐릭터가 없다.",
+    "refs": [
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+        "role": "style-only: snowy mobile-game scenery; UI and characters not copied"
+      },
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png",
+        "role": "style-only: soft rounded 3D materials; character not copied"
+      }
+    ],
+    "width": 1672,
+    "height": 941,
+    "bytes": 2065248,
+    "sha256": "65d59cd555419acb2f1a5a437815548586758f27d704a09c1f5a89e7a30a49b2",
+    "format": "PNG",
+    "bitDepth": 8,
+    "pngColorType": 2,
+    "validation": {
+      "pngSignatureAndCRC": true,
+      "idatDecompression": true,
+      "opaque": true,
+      "wideLandscape": true,
+      "textOrUI": false,
+      "characters": false,
+      "artworkInspected": true
+    }
+  },
+  {
+    "id": "region-pinewood",
+    "role": "region-background",
+    "regionId": "pinewood",
+    "source": "C:/Users/Semi/source/repos/northward-idle/assets/source/v2/region-pinewood.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: PINEWOOD — deep blue-green snowy conifer forest. Tall softly rounded evergreens heavily draped with pillowy snow frame both sides. A curved broad open snowy woodland trail leads through the center to a cozy little wooden trail lantern on a rounded post, with amber glow. Layered teal pine foliage and tree trunks create a forest canopy and woodland depth; a few mossy rounded boulders along the side. Very clearly a dense WINTER FOREST, without a sea, giant lake, distant bare mountain panorama or ruins. The central snow trail stays uncluttered and usable as a game stage.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-d696b332-82ca-4b8b-b8da-d8106e440364.png",
+    "referenceSources": [
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png"
+    ],
+    "transparentBackground": false,
+    "visualReview": "두툼한 눈을 얹은 둥근 침엽수와 숲길, 호박빛 등불. 숲이 주 배경이며 중앙 길을 비웠다. 글자·UI·캐릭터·동물 없음.",
+    "refs": [
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+        "role": "style-only: snowy mobile-game scenery; UI and characters not copied"
+      },
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png",
+        "role": "style-only: soft rounded 3D materials; character not copied"
+      }
+    ],
+    "width": 1672,
+    "height": 941,
+    "bytes": 2212658,
+    "sha256": "3e6547317249501593c01734b044cd4f479c9c2511be0f8075e8e2d29ac6ae41",
+    "format": "PNG",
+    "bitDepth": 8,
+    "pngColorType": 2,
+    "validation": {
+      "pngSignatureAndCRC": true,
+      "idatDecompression": true,
+      "opaque": true,
+      "wideLandscape": true,
+      "textOrUI": false,
+      "characters": false,
+      "artworkInspected": true
+    }
+  },
+  {
+    "id": "region-frozen-lake",
+    "role": "region-background",
+    "regionId": "frozen-lake",
+    "source": "C:/Users/Semi/source/repos/northward-idle/assets/source/v2/region-frozen-lake.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: FROZEN LAKE — an expansive magical-blue frozen inland lake under a bright clear winter sky. Glassy light-turquoise and blue ice, softly snow-covered shore edges, distant low rolling snow hills, a few small snow-padded pines on distant banks. One simple dark oval ice fishing opening near the side, surrounded by a small neat rim of snow, no rods or people. The lower central lake is broad smooth open pale-blue ice with soft reflected highlights and very subtle shallow crack patterns, large usable empty game stage. The LAKE surface should dominate and be immediately distinguishable from a beach, mountain trail or forest.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-b91929ef-271c-40d8-a4c3-f90e3209c21c.png",
+    "referenceSources": [
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png"
+    ],
+    "transparentBackground": false,
+    "visualReview": "맑은 푸른 얼음 호수가 화면을 채우고 오른쪽에 낚시 구멍이 있다. 중앙 얼음판은 넓고 단순하다. 글자·UI·캐릭터·동물 없음.",
+    "refs": [
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+        "role": "style-only: snowy mobile-game scenery; UI and characters not copied"
+      },
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png",
+        "role": "style-only: soft rounded 3D materials; character not copied"
+      }
+    ],
+    "width": 1672,
+    "height": 941,
+    "bytes": 2031846,
+    "sha256": "a3d99fc21747d0c67a57e93244576f51569171b631a1bb72a89459d060064bb0",
+    "format": "PNG",
+    "bitDepth": 8,
+    "pngColorType": 2,
+    "validation": {
+      "pngSignatureAndCRC": true,
+      "idatDecompression": true,
+      "opaque": true,
+      "wideLandscape": true,
+      "textOrUI": false,
+      "characters": false,
+      "artworkInspected": true
+    }
+  },
+  {
+    "id": "region-black-bog",
+    "role": "region-background",
+    "regionId": "black-bog",
+    "source": "C:/Users/Semi/source/repos/northward-idle/assets/source/v2/region-black-bog.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: BLACK BOG — a friendly colorful NORTHERN PEAT WETLAND in winter, NOT a spooky swamp. Winding shallow teal-blue water channels among rounded small peat islands padded with snow, cheerful warm tan reeds, a few soft blue-green alder trees and willow branches at the sides. Thin pale-blue ice sheets along the water margins and a very light soft mist in the distance, while the foreground stays crisp and sunny. Warm amber light from a single small wooden marker lantern on an island at upper left. A broad smooth central snow-covered peat causeway crossing the lower middle stays open for later sprites. Maintain saturated pastel teal water, blue snow shadows and warm golden reeds; no horror, no black desaturated darkness, no angular faceted art.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-606c7200-ad3b-4812-a6b2-410493008d8a.png",
+    "referenceSources": [
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png"
+    ],
+    "transparentBackground": false,
+    "visualReview": "청록 물길, 눈 이탄 섬, 따뜻한 갈대, 옅은 안개. 공포 톤 없이 밝고 중앙 둑길이 열려 있다. 글자·UI·캐릭터·동물 없음.",
+    "refs": [
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+        "role": "style-only: snowy mobile-game scenery; UI and characters not copied"
+      },
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png",
+        "role": "style-only: soft rounded 3D materials; character not copied"
+      }
+    ],
+    "width": 1672,
+    "height": 941,
+    "bytes": 2177003,
+    "sha256": "68dfad38d94e98a61c795bc3276592b7990eb8fc26be2eb090fb0f24c3fd3fe9",
+    "format": "PNG",
+    "bitDepth": 8,
+    "pngColorType": 2,
+    "validation": {
+      "pngSignatureAndCRC": true,
+      "idatDecompression": true,
+      "opaque": true,
+      "wideLandscape": true,
+      "textOrUI": false,
+      "characters": false,
+      "artworkInspected": true
+    }
+  },
+  {
+    "id": "region-knife-mountains",
+    "role": "region-background",
+    "regionId": "knife-mountains",
+    "source": "C:/Users/Semi/source/repos/northward-idle/assets/source/v2/region-knife-mountains.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: KNIFE MOUNTAINS — a spectacular high snowy MOUNTAIN PASS. Huge rounded boulders padded with thick soft snow flank a wide open gently curving snow trail, beyond it towering blue and lavender snowy ridgelines make a distinctive alpine panorama. Clear cold bright sky with rounded clouds, a little powder drifting gently from the crest. One small amber beacon on a simple post beside the upper-side trail provides a warm navigation point. Very few tiny hardy pines far away. Large simple open central snow path for sprites, mountains and large rounded rocks provide the stage silhouette. Friendly and adventurous, never jagged razor-cut angular low-poly geometry.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-b077aefb-3f28-4ae2-a32b-4f015c1dfaca.png",
+    "referenceSources": [
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png"
+    ],
+    "transparentBackground": false,
+    "visualReview": "큰 눈 바위와 웅장한 산등성이, 중앙 설산 길과 따뜻한 등불. 호수·숲과 구별된다. 글자·UI·캐릭터·동물 없음.",
+    "refs": [
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+        "role": "style-only: snowy mobile-game scenery; UI and characters not copied"
+      },
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png",
+        "role": "style-only: soft rounded 3D materials; character not copied"
+      }
+    ],
+    "width": 1672,
+    "height": 941,
+    "bytes": 2081732,
+    "sha256": "8f09774185476e58a261e561bb54e595b92a08016223777d292edfb62c96faa3",
+    "format": "PNG",
+    "bitDepth": 8,
+    "pngColorType": 2,
+    "validation": {
+      "pngSignatureAndCRC": true,
+      "idatDecompression": true,
+      "opaque": true,
+      "wideLandscape": true,
+      "textOrUI": false,
+      "characters": false,
+      "artworkInspected": true
+    }
+  },
+  {
+    "id": "region-aurora-ruins",
+    "role": "region-background",
+    "regionId": "aurora-ruins",
+    "source": "C:/Users/Semi/source/repos/northward-idle/assets/source/v2/region-aurora-ruins.png",
+    "prompt": "Use case: stylized-concept.\nAsset type: original northern survival game environment background. This is an ENVIRONMENT ART ASSET, not a screenshot or interface.\nInput image 1 is STYLE REFERENCE ONLY for soft stylized snowy game scenery and readable paths. Input image 2 is STYLE REFERENCE ONLY for soft rounded 3D forms and smooth toy-like materials. Do not reproduce any character, object identity, interface or text from either reference.\nStyle/medium: polished stylized 3D mobile game environment, friendly and colorful, softly rounded low-detail shapes with smooth bevels, thick pillowy snow and gentle dimensional lighting. NO angular outlined graphic-novel art; NO hard faceted low-poly slabs. Blue and pale turquoise shadows, pastel cyan snow highlights, warm amber accent light. Snow looks soft and plush, rocks and wood have rounded crafted silhouettes. Bright, cute, inviting northern adventure.\nComposition/framing: wide landscape 16:9 composition, preferably 1536x864 or another wide native canvas. Slightly elevated three-quarter view across an open snowy ground toward a distinct northern vista, usable as a game stage. Leave the central lower half mostly open simple snow/path for later character sprites; put distinctive scenery toward sides and upper half. Coherent full-bleed scene, no panels or margins.\nLighting/mood: clear soft daylight, cool-blue snow shadows, warm amber points. Enough color and contrast to read at small size.\nConstraints: NO people, NO characters, NO animals, NO cart, NO battle scene, NO UI, NO frames, NO text, NO letters, NO numbers, NO logos, NO buttons, NO watermark. Do not generate a reference screenshot. Make a new independent environment image.\nScene/backdrop: AURORA RUINS — a whimsical peaceful ANCIENT SNOWY RUIN at the end of a northern fairy-tale adventure. Rounded pale stone columns, a curved ancient stone arch and a low circular ruin platform padded with plush snow, framing a broad clear central snowy courtyard. Exactly six small warm amber beacon lights are arranged around the ruin perimeter, each a simple squat stone lantern with a glowing flame/light, symbolizing the six completed beacons. A beautiful flowing green-teal-purple northern aurora sweeps across a bright blue twilight sky. Override the default daylight with luminous pastel blue hour, but keep the snow bright, cute, colorful and welcoming, with clear shadows rather than darkness. No sinister temple, no people, no guardian, no carved writing. A joyful safe ending place, softly rounded 3D, broad open center for sprites and HUD.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "generatedSource": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ef-cfee-7fe2-af40-4b6bdfecd11a\\exec-570170fe-cbca-45cd-b2d7-453e616aadf3.png",
+    "referenceSources": [
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+      "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png"
+    ],
+    "transparentBackground": false,
+    "visualReview": "부드러운 고대 돌 아치·기둥, 초록·보라 북극광, 따뜻한 봉화 여섯 개. 중앙 광장과 밝은 결말 분위기. 글자·UI·캐릭터·동물 없음.",
+    "refs": [
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/exploration.webp",
+        "role": "style-only: snowy mobile-game scenery; UI and characters not copied"
+      },
+      {
+        "path": "C:/Users/Semi/source/repos/northward-idle/artifacts/reference/wos/jessie.png",
+        "role": "style-only: soft rounded 3D materials; character not copied"
+      }
+    ],
+    "width": 1672,
+    "height": 941,
+    "bytes": 2057174,
+    "sha256": "285f4819ae40c7a5a715cc05001b522a4b57fb8365e1c7ed3effbfa4cc5c473e",
+    "format": "PNG",
+    "bitDepth": 8,
+    "pngColorType": 2,
+    "validation": {
+      "pngSignatureAndCRC": true,
+      "idatDecompression": true,
+      "opaque": true,
+      "wideLandscape": true,
+      "textOrUI": false,
+      "characters": false,
+      "artworkInspected": true
+    }
+  }
+]

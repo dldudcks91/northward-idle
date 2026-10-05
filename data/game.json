@@ -1,0 +1,6012 @@
+{
+  "meta": {
+    "id": "northward-idle",
+    "title": "북방의 마지막 봉화",
+    "version": "1.1.0",
+    "subtitle": "한 사람의 불씨가 북방을 잇는다",
+    "description": "채집하고 만들고 준비하여 여섯 북방 지역의 봉화를 다시 밝히는 생존 방치 게임.",
+    "endingTitle": "여섯 개의 불빛",
+    "ending": "수호자의 빛이 바른 방향을 되찾았다. 한 사람이 이어온 길 위에 다시 삶이 흐른다. 이제 이전 지역을 탐험하고 모든 제작과 수집을 완성할 수 있다."
+  },
+  "settings": {
+    "baseStats": {
+      "maxHp": 96,
+      "attack": 7,
+      "defense": 1,
+      "attackMs": 2350,
+      "critChance": 0.08,
+      "warmth": 0
+    },
+    "focusStopMs": 650,
+    "offlineCapMs": 604800000,
+    "combatHpPerLevel": 4,
+    "combatAttackPerLevel": 0.8,
+    "combatDefenseLevels": 4,
+    "skillXpDivisor": 25,
+    "gatherXp": 18,
+    "craftXp": 24,
+    "combatXp": 22,
+    "explorationXp": 35,
+    "passiveHealMs": 5000,
+    "passiveHealAmount": 3,
+    "recoveryMs": 30000,
+    "lossStreakFraction": 0.25,
+    "lossPerDefeatFraction": 0.08,
+    "lossStreakCap": 24,
+    "eventLimit": 80,
+    "workMinSpeedFactor": 0.7,
+    "autoFoodThreshold": 0.45,
+    "initialInventory": {
+      "starter-spear": 1,
+      "starter-coat": 1,
+      "starter-charm": 1,
+      "rime-shore-food": 8
+    },
+    "initialEquipment": {
+      "weapon": "starter-spear",
+      "armor": "starter-coat",
+      "charm": "starter-charm"
+    }
+  },
+  "combatStyles": [
+    {
+      "id": "balanced",
+      "name": "균형",
+      "description": "공격과 방어를 고르게 유지한다.",
+      "attackMultiplier": 1,
+      "defenseMultiplier": 1,
+      "attackMs": 0,
+      "skillName": "연속 찌르기",
+      "skillEvery": 4,
+      "skillDamage": 1.35,
+      "guardMultiplier": 1
+    },
+    {
+      "id": "power",
+      "name": "강타",
+      "description": "공격을 20% 높이고 행동 주기를 0.35초 늘린다.",
+      "attackMultiplier": 1.2,
+      "defenseMultiplier": 1,
+      "attackMs": 350,
+      "skillName": "힘껏 내려찍기",
+      "skillEvery": 4,
+      "skillDamage": 1.7,
+      "guardMultiplier": 1
+    },
+    {
+      "id": "guard",
+      "name": "수비",
+      "description": "방어를 25% 높인다. 네 번째 공격 뒤 다음 타격을 절반으로 막는다.",
+      "attackMultiplier": 0.9,
+      "defenseMultiplier": 1.25,
+      "attackMs": 0,
+      "skillName": "단단한 버티기",
+      "skillEvery": 4,
+      "skillDamage": 1.1,
+      "guardMultiplier": 0.5
+    }
+  ],
+  "skills": [
+    {
+      "id": "woodcutting",
+      "name": "벌목",
+      "description": "목재를 모아 판재와 튼튼한 장비로 잇는다."
+    },
+    {
+      "id": "mining",
+      "name": "채광",
+      "description": "광맥을 찾아 제련할 금속과 부적의 돌을 얻는다."
+    },
+    {
+      "id": "foraging",
+      "name": "채집",
+      "description": "야생의 고기와 물고기, 약초를 보급으로 바꾼다."
+    },
+    {
+      "id": "crafting",
+      "name": "제작",
+      "description": "재료를 가공하고 무기·갑옷·부적을 만든다."
+    },
+    {
+      "id": "cooking",
+      "name": "요리",
+      "description": "탐험과 수비를 이어주는 따뜻한 음식을 만든다."
+    },
+    {
+      "id": "combat",
+      "name": "전투",
+      "description": "자동전투를 겪으며 체력·공격·방어가 함께 자란다."
+    },
+    {
+      "id": "exploration",
+      "name": "탐험",
+      "description": "북방의 길을 익혀 원정을 더 빠르게 준비한다."
+    }
+  ],
+  "items": [
+    {
+      "id": "starter-spear",
+      "name": "낡은 사냥창",
+      "kind": "equipment",
+      "slot": "weapon",
+      "stats": {
+        "attack": 4
+      },
+      "description": "오랫동안 손에 익은 창. 새로운 금속으로 바꿀 수 있다."
+    },
+    {
+      "id": "starter-coat",
+      "name": "여행자의 두꺼운 옷",
+      "kind": "equipment",
+      "slot": "armor",
+      "stats": {
+        "defense": 3,
+        "maxHp": 8,
+        "warmth": 1
+      },
+      "description": "바닷바람을 막아주는 옷. 깊은 북방에는 더 나은 방한구가 필요하다."
+    },
+    {
+      "id": "starter-charm",
+      "name": "고향의 작은 매듭",
+      "kind": "equipment",
+      "slot": "charm",
+      "stats": {
+        "maxHp": 4
+      },
+      "description": "고향의 온기를 기억하게 하는 작은 매듭."
+    },
+    {
+      "id": "rime-shore-wood",
+      "name": "해송 원목",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "서릿바람 해안에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "rime-shore-ore",
+      "name": "해안 구리광",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "서릿바람 해안에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "rime-shore-herb",
+      "name": "소금풀",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "서릿바람 해안에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "rime-shore-raw",
+      "name": "청어",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "서릿바람 해안에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "rime-shore-hide",
+      "name": "질긴 가죽",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "서릿바람 해안에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "rime-shore-stone",
+      "name": "매끈한 조약돌",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "서릿바람 해안에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "rime-shore-plank",
+      "name": "해송 판재",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "벌목 재료를 다듬은 제작용 판재."
+    },
+    {
+      "id": "rime-shore-ingot",
+      "name": "구리 주괴",
+      "kind": "material",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "광석을 제련한 장비용 금속."
+    },
+    {
+      "id": "rime-shore-food",
+      "name": "청어 구이",
+      "kind": "food",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "heal": 36,
+      "quality": 1,
+      "description": "탐험 보급 및 자동 회복. 체력 36 회복 · 보급 품질 1."
+    },
+    {
+      "id": "rime-shore-weapon",
+      "name": "구리 사냥창",
+      "kind": "equipment",
+      "slot": "weapon",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "stats": {
+        "attack": 12,
+        "attackMs": -50,
+        "critChance": 0.008
+      },
+      "description": "단단한 금속과 판재를 결합한 북방용 무기."
+    },
+    {
+      "id": "rime-shore-armor",
+      "name": "해안 가죽옷",
+      "kind": "equipment",
+      "slot": "armor",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "stats": {
+        "defense": 7,
+        "maxHp": 28,
+        "warmth": 1
+      },
+      "description": "지역의 환경과 짐승의 공격을 견디는 방한 장비."
+    },
+    {
+      "id": "rime-shore-charm",
+      "name": "조약돌 부적",
+      "kind": "equipment",
+      "slot": "charm",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "stats": {
+        "attack": 2,
+        "warmth": 2,
+        "maxHp": 4
+      },
+      "description": "주변의 돌과 약초로 만드는 부적. 온기와 체력을 더한다."
+    },
+    {
+      "id": "rime-shore-trophy",
+      "name": "서릿바람 해안의 봉화 인장",
+      "kind": "trophy",
+      "tier": 1,
+      "regionId": "rime-shore",
+      "description": "지역을 돌파한 증표. 패배로 잃지 않는다."
+    },
+    {
+      "id": "pinewood-wood",
+      "name": "전나무 원목",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "검푸른 침엽림에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "pinewood-ore",
+      "name": "적철광",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "검푸른 침엽림에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "pinewood-herb",
+      "name": "겨울 버섯",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "검푸른 침엽림에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "pinewood-raw",
+      "name": "사슴 고기",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "검푸른 침엽림에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "pinewood-hide",
+      "name": "두꺼운 모피",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "검푸른 침엽림에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "pinewood-stone",
+      "name": "검푸른 수지",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "검푸른 침엽림에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "pinewood-plank",
+      "name": "전나무 판재",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "벌목 재료를 다듬은 제작용 판재."
+    },
+    {
+      "id": "pinewood-ingot",
+      "name": "연철 주괴",
+      "kind": "material",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "광석을 제련한 장비용 금속."
+    },
+    {
+      "id": "pinewood-food",
+      "name": "사슴 버섯 스튜",
+      "kind": "food",
+      "tier": 2,
+      "regionId": "pinewood",
+      "heal": 52,
+      "quality": 2,
+      "description": "탐험 보급 및 자동 회복. 체력 52 회복 · 보급 품질 2."
+    },
+    {
+      "id": "pinewood-weapon",
+      "name": "연철 벌채도끼",
+      "kind": "equipment",
+      "slot": "weapon",
+      "tier": 2,
+      "regionId": "pinewood",
+      "stats": {
+        "attack": 24,
+        "attackMs": -100,
+        "critChance": 0.016
+      },
+      "description": "단단한 금속과 판재를 결합한 북방용 무기."
+    },
+    {
+      "id": "pinewood-armor",
+      "name": "모피 사냥복",
+      "kind": "equipment",
+      "slot": "armor",
+      "tier": 2,
+      "regionId": "pinewood",
+      "stats": {
+        "defense": 14,
+        "maxHp": 38,
+        "warmth": 2
+      },
+      "description": "지역의 환경과 짐승의 공격을 견디는 방한 장비."
+    },
+    {
+      "id": "pinewood-charm",
+      "name": "수지 목걸이",
+      "kind": "equipment",
+      "slot": "charm",
+      "tier": 2,
+      "regionId": "pinewood",
+      "stats": {
+        "attack": 3,
+        "warmth": 4,
+        "maxHp": 8
+      },
+      "description": "주변의 돌과 약초로 만드는 부적. 온기와 체력을 더한다."
+    },
+    {
+      "id": "pinewood-trophy",
+      "name": "검푸른 침엽림의 봉화 인장",
+      "kind": "trophy",
+      "tier": 2,
+      "regionId": "pinewood",
+      "description": "지역을 돌파한 증표. 패배로 잃지 않는다."
+    },
+    {
+      "id": "frozen-lake-wood",
+      "name": "물버들 원목",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "얼어붙은 호수에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "frozen-lake-ore",
+      "name": "자철광",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "얼어붙은 호수에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "frozen-lake-herb",
+      "name": "얼음 이끼",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "얼어붙은 호수에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "frozen-lake-raw",
+      "name": "얼음 송어",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "얼어붙은 호수에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "frozen-lake-hide",
+      "name": "사슴 힘줄",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "얼어붙은 호수에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "frozen-lake-stone",
+      "name": "푸른 수정",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "얼어붙은 호수에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "frozen-lake-plank",
+      "name": "물버들 판재",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "벌목 재료를 다듬은 제작용 판재."
+    },
+    {
+      "id": "frozen-lake-ingot",
+      "name": "강철 주괴",
+      "kind": "material",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "광석을 제련한 장비용 금속."
+    },
+    {
+      "id": "frozen-lake-food",
+      "name": "송어 약초찜",
+      "kind": "food",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "heal": 70,
+      "quality": 3,
+      "description": "탐험 보급 및 자동 회복. 체력 70 회복 · 보급 품질 3."
+    },
+    {
+      "id": "frozen-lake-weapon",
+      "name": "강철 낚시창",
+      "kind": "equipment",
+      "slot": "weapon",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "stats": {
+        "attack": 36,
+        "attackMs": -150,
+        "critChance": 0.024
+      },
+      "description": "단단한 금속과 판재를 결합한 북방용 무기."
+    },
+    {
+      "id": "frozen-lake-armor",
+      "name": "힘줄 보강갑옷",
+      "kind": "equipment",
+      "slot": "armor",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "stats": {
+        "defense": 21,
+        "maxHp": 48,
+        "warmth": 3
+      },
+      "description": "지역의 환경과 짐승의 공격을 견디는 방한 장비."
+    },
+    {
+      "id": "frozen-lake-charm",
+      "name": "푸른 수정 부적",
+      "kind": "equipment",
+      "slot": "charm",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "stats": {
+        "attack": 4,
+        "warmth": 6,
+        "maxHp": 12
+      },
+      "description": "주변의 돌과 약초로 만드는 부적. 온기와 체력을 더한다."
+    },
+    {
+      "id": "frozen-lake-trophy",
+      "name": "얼어붙은 호수의 봉화 인장",
+      "kind": "trophy",
+      "tier": 3,
+      "regionId": "frozen-lake",
+      "description": "지역을 돌파한 증표. 패배로 잃지 않는다."
+    },
+    {
+      "id": "black-bog-wood",
+      "name": "늪오리나무 원목",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "검은 이탄습지에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "black-bog-ore",
+      "name": "늪철 덩이",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "검은 이탄습지에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "black-bog-herb",
+      "name": "이탄 약초",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "검은 이탄습지에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "black-bog-raw",
+      "name": "늪장어",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "검은 이탄습지에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "black-bog-hide",
+      "name": "멧돼지 가죽",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "검은 이탄습지에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "black-bog-stone",
+      "name": "단단한 이탄",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "검은 이탄습지에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "black-bog-plank",
+      "name": "방수 판재",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "벌목 재료를 다듬은 제작용 판재."
+    },
+    {
+      "id": "black-bog-ingot",
+      "name": "흑철 주괴",
+      "kind": "material",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "광석을 제련한 장비용 금속."
+    },
+    {
+      "id": "black-bog-food",
+      "name": "장어 약초탕",
+      "kind": "food",
+      "tier": 4,
+      "regionId": "black-bog",
+      "heal": 88,
+      "quality": 4,
+      "description": "탐험 보급 및 자동 회복. 체력 88 회복 · 보급 품질 4."
+    },
+    {
+      "id": "black-bog-weapon",
+      "name": "흑철 전투도끼",
+      "kind": "equipment",
+      "slot": "weapon",
+      "tier": 4,
+      "regionId": "black-bog",
+      "stats": {
+        "attack": 48,
+        "attackMs": -200,
+        "critChance": 0.032
+      },
+      "description": "단단한 금속과 판재를 결합한 북방용 무기."
+    },
+    {
+      "id": "black-bog-armor",
+      "name": "이탄 방한갑옷",
+      "kind": "equipment",
+      "slot": "armor",
+      "tier": 4,
+      "regionId": "black-bog",
+      "stats": {
+        "defense": 28,
+        "maxHp": 58,
+        "warmth": 4
+      },
+      "description": "지역의 환경과 짐승의 공격을 견디는 방한 장비."
+    },
+    {
+      "id": "black-bog-charm",
+      "name": "늪돌 봉인부",
+      "kind": "equipment",
+      "slot": "charm",
+      "tier": 4,
+      "regionId": "black-bog",
+      "stats": {
+        "attack": 5,
+        "warmth": 8,
+        "maxHp": 16
+      },
+      "description": "주변의 돌과 약초로 만드는 부적. 온기와 체력을 더한다."
+    },
+    {
+      "id": "black-bog-trophy",
+      "name": "검은 이탄습지의 봉화 인장",
+      "kind": "trophy",
+      "tier": 4,
+      "regionId": "black-bog",
+      "description": "지역을 돌파한 증표. 패배로 잃지 않는다."
+    },
+    {
+      "id": "knife-mountains-wood",
+      "name": "산주목 원목",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "칼바람 산맥에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "knife-mountains-ore",
+      "name": "설산 은광",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "칼바람 산맥에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "knife-mountains-herb",
+      "name": "고산 약초",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "칼바람 산맥에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "knife-mountains-raw",
+      "name": "설원 들새 고기",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "칼바람 산맥에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "knife-mountains-hide",
+      "name": "불곰 모피",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "칼바람 산맥에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "knife-mountains-stone",
+      "name": "눈꽃석",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "칼바람 산맥에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "knife-mountains-plank",
+      "name": "주목 판재",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "벌목 재료를 다듬은 제작용 판재."
+    },
+    {
+      "id": "knife-mountains-ingot",
+      "name": "은강 주괴",
+      "kind": "material",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "광석을 제련한 장비용 금속."
+    },
+    {
+      "id": "knife-mountains-food",
+      "name": "고산 보양식",
+      "kind": "food",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "heal": 110,
+      "quality": 5,
+      "description": "탐험 보급 및 자동 회복. 체력 110 회복 · 보급 품질 5."
+    },
+    {
+      "id": "knife-mountains-weapon",
+      "name": "은강 장창",
+      "kind": "equipment",
+      "slot": "weapon",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "stats": {
+        "attack": 61,
+        "attackMs": -250,
+        "critChance": 0.04
+      },
+      "description": "단단한 금속과 판재를 결합한 북방용 무기."
+    },
+    {
+      "id": "knife-mountains-armor",
+      "name": "불곰 방한갑옷",
+      "kind": "equipment",
+      "slot": "armor",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "stats": {
+        "defense": 35,
+        "maxHp": 68,
+        "warmth": 5
+      },
+      "description": "지역의 환경과 짐승의 공격을 견디는 방한 장비."
+    },
+    {
+      "id": "knife-mountains-charm",
+      "name": "눈꽃석 펜던트",
+      "kind": "equipment",
+      "slot": "charm",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "stats": {
+        "attack": 6,
+        "warmth": 10,
+        "maxHp": 20
+      },
+      "description": "주변의 돌과 약초로 만드는 부적. 온기와 체력을 더한다."
+    },
+    {
+      "id": "knife-mountains-trophy",
+      "name": "칼바람 산맥의 봉화 인장",
+      "kind": "trophy",
+      "tier": 5,
+      "regionId": "knife-mountains",
+      "description": "지역을 돌파한 증표. 패배로 잃지 않는다."
+    },
+    {
+      "id": "aurora-ruins-wood",
+      "name": "고대 거목 조각",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "북극광 유적에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "aurora-ruins-ore",
+      "name": "별철 광석",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "북극광 유적에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "aurora-ruins-herb",
+      "name": "북극광 꽃",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "북극광 유적에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "aurora-ruins-raw",
+      "name": "빙하 은어",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "북극광 유적에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "aurora-ruins-hide",
+      "name": "은빛 모피",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "북극광 유적에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "aurora-ruins-stone",
+      "name": "오로라 파편",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "북극광 유적에서 얻는 재료. 음식과 장비 제작에 사용한다."
+    },
+    {
+      "id": "aurora-ruins-plank",
+      "name": "고대 판재",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "벌목 재료를 다듬은 제작용 판재."
+    },
+    {
+      "id": "aurora-ruins-ingot",
+      "name": "별철 주괴",
+      "kind": "material",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "광석을 제련한 장비용 금속."
+    },
+    {
+      "id": "aurora-ruins-food",
+      "name": "극광 만찬",
+      "kind": "food",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "heal": 132,
+      "quality": 6,
+      "description": "탐험 보급 및 자동 회복. 체력 132 회복 · 보급 품질 6."
+    },
+    {
+      "id": "aurora-ruins-weapon",
+      "name": "별철 수호창",
+      "kind": "equipment",
+      "slot": "weapon",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "stats": {
+        "attack": 76,
+        "attackMs": -300,
+        "critChance": 0.048
+      },
+      "description": "단단한 금속과 판재를 결합한 북방용 무기."
+    },
+    {
+      "id": "aurora-ruins-armor",
+      "name": "극광 수호갑옷",
+      "kind": "equipment",
+      "slot": "armor",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "stats": {
+        "defense": 43,
+        "maxHp": 78,
+        "warmth": 6
+      },
+      "description": "지역의 환경과 짐승의 공격을 견디는 방한 장비."
+    },
+    {
+      "id": "aurora-ruins-charm",
+      "name": "봉화의 심장",
+      "kind": "equipment",
+      "slot": "charm",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "stats": {
+        "attack": 7,
+        "warmth": 12,
+        "maxHp": 24
+      },
+      "description": "주변의 돌과 약초로 만드는 부적. 온기와 체력을 더한다."
+    },
+    {
+      "id": "aurora-ruins-trophy",
+      "name": "북극광 유적의 봉화 인장",
+      "kind": "trophy",
+      "tier": 6,
+      "regionId": "aurora-ruins",
+      "description": "지역을 돌파한 증표. 패배로 잃지 않는다."
+    },
+    {
+      "id": "seed-rime-shore",
+      "name": "서릿바람 해안 씨앗",
+      "kind": "material",
+      "description": "독립 농사에서 한 번 심을 때 1개를 소비합니다.",
+      "icon": "leaf"
+    },
+    {
+      "id": "seed-pinewood",
+      "name": "검푸른 침엽림 씨앗",
+      "kind": "material",
+      "description": "독립 농사에서 한 번 심을 때 1개를 소비합니다.",
+      "icon": "leaf"
+    },
+    {
+      "id": "seed-frozen-lake",
+      "name": "얼어붙은 호수 씨앗",
+      "kind": "material",
+      "description": "독립 농사에서 한 번 심을 때 1개를 소비합니다.",
+      "icon": "leaf"
+    },
+    {
+      "id": "seed-black-bog",
+      "name": "검은 이탄습지 씨앗",
+      "kind": "material",
+      "description": "독립 농사에서 한 번 심을 때 1개를 소비합니다.",
+      "icon": "leaf"
+    },
+    {
+      "id": "seed-knife-mountains",
+      "name": "칼바람 산맥 씨앗",
+      "kind": "material",
+      "description": "독립 농사에서 한 번 심을 때 1개를 소비합니다.",
+      "icon": "leaf"
+    },
+    {
+      "id": "seed-aurora-ruins",
+      "name": "북극광 유적 씨앗",
+      "kind": "material",
+      "description": "독립 농사에서 한 번 심을 때 1개를 소비합니다.",
+      "icon": "leaf"
+    }
+  ],
+  "activities": [
+    {
+      "id": "rime-shore-logging",
+      "name": "해송 원목 벌목",
+      "regionId": "rime-shore",
+      "skillId": "woodcutting",
+      "durationMs": 12000,
+      "outputs": {
+        "rime-shore-wood": 4,
+        "rime-shore-herb": 1
+      },
+      "description": "목재를 모으고 나무 주변의 약초도 함께 채집한다."
+    },
+    {
+      "id": "rime-shore-mining",
+      "name": "해안 구리광 채광",
+      "regionId": "rime-shore",
+      "skillId": "mining",
+      "durationMs": 14500,
+      "outputs": {
+        "rime-shore-ore": 4,
+        "rime-shore-stone": 1
+      },
+      "description": "광석과 부적에 쓰는 돌을 모은다."
+    },
+    {
+      "id": "rime-shore-hunting",
+      "name": "얼음 낚시",
+      "regionId": "rime-shore",
+      "skillId": "foraging",
+      "durationMs": 16000,
+      "outputs": {
+        "rime-shore-raw": 4,
+        "rime-shore-hide": 1
+      },
+      "description": "청어와 주변에서 찾은 가죽·힘줄을 함께 얻는다."
+    },
+    {
+      "id": "pinewood-logging",
+      "name": "전나무 원목 벌목",
+      "regionId": "pinewood",
+      "skillId": "woodcutting",
+      "durationMs": 15000,
+      "outputs": {
+        "pinewood-wood": 4,
+        "pinewood-herb": 1
+      },
+      "description": "목재를 모으고 나무 주변의 약초도 함께 채집한다."
+    },
+    {
+      "id": "pinewood-mining",
+      "name": "적철광 채광",
+      "regionId": "pinewood",
+      "skillId": "mining",
+      "durationMs": 17500,
+      "outputs": {
+        "pinewood-ore": 4,
+        "pinewood-stone": 1
+      },
+      "description": "광석과 부적에 쓰는 돌을 모은다."
+    },
+    {
+      "id": "pinewood-hunting",
+      "name": "겨울 수렵",
+      "regionId": "pinewood",
+      "skillId": "foraging",
+      "durationMs": 19000,
+      "outputs": {
+        "pinewood-raw": 4,
+        "pinewood-hide": 1
+      },
+      "description": "사슴 고기와 주변에서 찾은 가죽·힘줄을 함께 얻는다."
+    },
+    {
+      "id": "frozen-lake-logging",
+      "name": "물버들 원목 벌목",
+      "regionId": "frozen-lake",
+      "skillId": "woodcutting",
+      "durationMs": 18000,
+      "outputs": {
+        "frozen-lake-wood": 4,
+        "frozen-lake-herb": 1
+      },
+      "description": "목재를 모으고 나무 주변의 약초도 함께 채집한다."
+    },
+    {
+      "id": "frozen-lake-mining",
+      "name": "자철광 채광",
+      "regionId": "frozen-lake",
+      "skillId": "mining",
+      "durationMs": 20500,
+      "outputs": {
+        "frozen-lake-ore": 4,
+        "frozen-lake-stone": 1
+      },
+      "description": "광석과 부적에 쓰는 돌을 모은다."
+    },
+    {
+      "id": "frozen-lake-hunting",
+      "name": "얼음 낚시",
+      "regionId": "frozen-lake",
+      "skillId": "foraging",
+      "durationMs": 22000,
+      "outputs": {
+        "frozen-lake-raw": 4,
+        "frozen-lake-hide": 1
+      },
+      "description": "얼음 송어와 주변에서 찾은 가죽·힘줄을 함께 얻는다."
+    },
+    {
+      "id": "black-bog-logging",
+      "name": "늪오리나무 원목 벌목",
+      "regionId": "black-bog",
+      "skillId": "woodcutting",
+      "durationMs": 21000,
+      "outputs": {
+        "black-bog-wood": 4,
+        "black-bog-herb": 1
+      },
+      "description": "목재를 모으고 나무 주변의 약초도 함께 채집한다."
+    },
+    {
+      "id": "black-bog-mining",
+      "name": "늪철 덩이 채광",
+      "regionId": "black-bog",
+      "skillId": "mining",
+      "durationMs": 23500,
+      "outputs": {
+        "black-bog-ore": 4,
+        "black-bog-stone": 1
+      },
+      "description": "광석과 부적에 쓰는 돌을 모은다."
+    },
+    {
+      "id": "black-bog-hunting",
+      "name": "늪장어 채집",
+      "regionId": "black-bog",
+      "skillId": "foraging",
+      "durationMs": 25000,
+      "outputs": {
+        "black-bog-raw": 4,
+        "black-bog-hide": 1
+      },
+      "description": "늪장어와 주변에서 찾은 가죽·힘줄을 함께 얻는다."
+    },
+    {
+      "id": "knife-mountains-logging",
+      "name": "산주목 원목 벌목",
+      "regionId": "knife-mountains",
+      "skillId": "woodcutting",
+      "durationMs": 24000,
+      "outputs": {
+        "knife-mountains-wood": 4,
+        "knife-mountains-herb": 1
+      },
+      "description": "목재를 모으고 나무 주변의 약초도 함께 채집한다."
+    },
+    {
+      "id": "knife-mountains-mining",
+      "name": "설산 은광 채광",
+      "regionId": "knife-mountains",
+      "skillId": "mining",
+      "durationMs": 26500,
+      "outputs": {
+        "knife-mountains-ore": 4,
+        "knife-mountains-stone": 1
+      },
+      "description": "광석과 부적에 쓰는 돌을 모은다."
+    },
+    {
+      "id": "knife-mountains-hunting",
+      "name": "겨울 수렵",
+      "regionId": "knife-mountains",
+      "skillId": "foraging",
+      "durationMs": 28000,
+      "outputs": {
+        "knife-mountains-raw": 4,
+        "knife-mountains-hide": 1
+      },
+      "description": "설원 들새 고기와 주변에서 찾은 가죽·힘줄을 함께 얻는다."
+    },
+    {
+      "id": "aurora-ruins-logging",
+      "name": "고대 거목 조각 벌목",
+      "regionId": "aurora-ruins",
+      "skillId": "woodcutting",
+      "durationMs": 27000,
+      "outputs": {
+        "aurora-ruins-wood": 4,
+        "aurora-ruins-herb": 1
+      },
+      "description": "목재를 모으고 나무 주변의 약초도 함께 채집한다."
+    },
+    {
+      "id": "aurora-ruins-mining",
+      "name": "별철 광석 채광",
+      "regionId": "aurora-ruins",
+      "skillId": "mining",
+      "durationMs": 29500,
+      "outputs": {
+        "aurora-ruins-ore": 4,
+        "aurora-ruins-stone": 1
+      },
+      "description": "광석과 부적에 쓰는 돌을 모은다."
+    },
+    {
+      "id": "aurora-ruins-hunting",
+      "name": "얼음 낚시",
+      "regionId": "aurora-ruins",
+      "skillId": "foraging",
+      "durationMs": 31000,
+      "outputs": {
+        "aurora-ruins-raw": 4,
+        "aurora-ruins-hide": 1
+      },
+      "description": "빙하 은어와 주변에서 찾은 가죽·힘줄을 함께 얻는다."
+    }
+  ],
+  "recipes": [
+    {
+      "id": "rime-shore-saw",
+      "name": "해송 판재 가공",
+      "regionId": "rime-shore",
+      "skillId": "crafting",
+      "durationMs": 9000,
+      "inputs": {
+        "rime-shore-wood": 4
+      },
+      "outputs": {
+        "rime-shore-plank": 2
+      },
+      "level": 1,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "rime-shore-smelt",
+      "name": "구리 주괴 제련",
+      "regionId": "rime-shore",
+      "skillId": "crafting",
+      "durationMs": 10000,
+      "inputs": {
+        "rime-shore-ore": 4,
+        "rime-shore-wood": 1
+      },
+      "outputs": {
+        "rime-shore-ingot": 2
+      },
+      "level": 1,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "rime-shore-cook",
+      "name": "청어 구이 요리",
+      "regionId": "rime-shore",
+      "skillId": "cooking",
+      "durationMs": 10000,
+      "inputs": {
+        "rime-shore-raw": 4,
+        "rime-shore-herb": 1
+      },
+      "outputs": {
+        "rime-shore-food": 3
+      },
+      "level": 1,
+      "description": "완성한 음식은 탐험 보급과 전투 중 자동 회복에 쓰인다."
+    },
+    {
+      "id": "rime-shore-forge-weapon",
+      "name": "구리 사냥창 제작",
+      "regionId": "rime-shore",
+      "skillId": "crafting",
+      "durationMs": 20000,
+      "inputs": {
+        "rime-shore-ingot": 4,
+        "rime-shore-plank": 4,
+        "rime-shore-hide": 2
+      },
+      "outputs": {
+        "rime-shore-weapon": 1
+      },
+      "level": 1,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "rime-shore-sew-armor",
+      "name": "해안 가죽옷 제작",
+      "regionId": "rime-shore",
+      "skillId": "crafting",
+      "durationMs": 22000,
+      "inputs": {
+        "rime-shore-hide": 6,
+        "rime-shore-ingot": 2,
+        "rime-shore-plank": 2
+      },
+      "outputs": {
+        "rime-shore-armor": 1
+      },
+      "level": 1,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "rime-shore-carve-charm",
+      "name": "조약돌 부적 제작",
+      "regionId": "rime-shore",
+      "skillId": "crafting",
+      "durationMs": 16000,
+      "inputs": {
+        "rime-shore-stone": 3,
+        "rime-shore-herb": 3,
+        "rime-shore-plank": 2
+      },
+      "outputs": {
+        "rime-shore-charm": 1
+      },
+      "level": 1,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "pinewood-saw",
+      "name": "전나무 판재 가공",
+      "regionId": "pinewood",
+      "skillId": "crafting",
+      "durationMs": 11000,
+      "inputs": {
+        "pinewood-wood": 4
+      },
+      "outputs": {
+        "pinewood-plank": 2
+      },
+      "level": 2,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "pinewood-smelt",
+      "name": "연철 주괴 제련",
+      "regionId": "pinewood",
+      "skillId": "crafting",
+      "durationMs": 12000,
+      "inputs": {
+        "pinewood-ore": 4,
+        "pinewood-wood": 1
+      },
+      "outputs": {
+        "pinewood-ingot": 2
+      },
+      "level": 2,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "pinewood-cook",
+      "name": "사슴 버섯 스튜 요리",
+      "regionId": "pinewood",
+      "skillId": "cooking",
+      "durationMs": 12000,
+      "inputs": {
+        "pinewood-raw": 4,
+        "pinewood-herb": 1
+      },
+      "outputs": {
+        "pinewood-food": 3
+      },
+      "level": 1,
+      "description": "완성한 음식은 탐험 보급과 전투 중 자동 회복에 쓰인다."
+    },
+    {
+      "id": "pinewood-forge-weapon",
+      "name": "연철 벌채도끼 제작",
+      "regionId": "pinewood",
+      "skillId": "crafting",
+      "durationMs": 24000,
+      "inputs": {
+        "pinewood-ingot": 4,
+        "pinewood-plank": 4,
+        "pinewood-hide": 2
+      },
+      "outputs": {
+        "pinewood-weapon": 1
+      },
+      "level": 2,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "pinewood-sew-armor",
+      "name": "모피 사냥복 제작",
+      "regionId": "pinewood",
+      "skillId": "crafting",
+      "durationMs": 26000,
+      "inputs": {
+        "pinewood-hide": 6,
+        "pinewood-ingot": 2,
+        "pinewood-plank": 2
+      },
+      "outputs": {
+        "pinewood-armor": 1
+      },
+      "level": 2,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "pinewood-carve-charm",
+      "name": "수지 목걸이 제작",
+      "regionId": "pinewood",
+      "skillId": "crafting",
+      "durationMs": 19000,
+      "inputs": {
+        "pinewood-stone": 3,
+        "pinewood-herb": 3,
+        "pinewood-plank": 2
+      },
+      "outputs": {
+        "pinewood-charm": 1
+      },
+      "level": 2,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "frozen-lake-saw",
+      "name": "물버들 판재 가공",
+      "regionId": "frozen-lake",
+      "skillId": "crafting",
+      "durationMs": 13000,
+      "inputs": {
+        "frozen-lake-wood": 4
+      },
+      "outputs": {
+        "frozen-lake-plank": 2
+      },
+      "level": 3,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "frozen-lake-smelt",
+      "name": "강철 주괴 제련",
+      "regionId": "frozen-lake",
+      "skillId": "crafting",
+      "durationMs": 14000,
+      "inputs": {
+        "frozen-lake-ore": 4,
+        "frozen-lake-wood": 1
+      },
+      "outputs": {
+        "frozen-lake-ingot": 2
+      },
+      "level": 3,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "frozen-lake-cook",
+      "name": "송어 약초찜 요리",
+      "regionId": "frozen-lake",
+      "skillId": "cooking",
+      "durationMs": 14000,
+      "inputs": {
+        "frozen-lake-raw": 4,
+        "frozen-lake-herb": 1
+      },
+      "outputs": {
+        "frozen-lake-food": 3
+      },
+      "level": 2,
+      "description": "완성한 음식은 탐험 보급과 전투 중 자동 회복에 쓰인다."
+    },
+    {
+      "id": "frozen-lake-forge-weapon",
+      "name": "강철 낚시창 제작",
+      "regionId": "frozen-lake",
+      "skillId": "crafting",
+      "durationMs": 28000,
+      "inputs": {
+        "frozen-lake-ingot": 4,
+        "frozen-lake-plank": 4,
+        "frozen-lake-hide": 2
+      },
+      "outputs": {
+        "frozen-lake-weapon": 1
+      },
+      "level": 3,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "frozen-lake-sew-armor",
+      "name": "힘줄 보강갑옷 제작",
+      "regionId": "frozen-lake",
+      "skillId": "crafting",
+      "durationMs": 30000,
+      "inputs": {
+        "frozen-lake-hide": 6,
+        "frozen-lake-ingot": 2,
+        "frozen-lake-plank": 2
+      },
+      "outputs": {
+        "frozen-lake-armor": 1
+      },
+      "level": 3,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "frozen-lake-carve-charm",
+      "name": "푸른 수정 부적 제작",
+      "regionId": "frozen-lake",
+      "skillId": "crafting",
+      "durationMs": 22000,
+      "inputs": {
+        "frozen-lake-stone": 3,
+        "frozen-lake-herb": 3,
+        "frozen-lake-plank": 2
+      },
+      "outputs": {
+        "frozen-lake-charm": 1
+      },
+      "level": 3,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "black-bog-saw",
+      "name": "방수 판재 가공",
+      "regionId": "black-bog",
+      "skillId": "crafting",
+      "durationMs": 15000,
+      "inputs": {
+        "black-bog-wood": 4
+      },
+      "outputs": {
+        "black-bog-plank": 2
+      },
+      "level": 4,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "black-bog-smelt",
+      "name": "흑철 주괴 제련",
+      "regionId": "black-bog",
+      "skillId": "crafting",
+      "durationMs": 16000,
+      "inputs": {
+        "black-bog-ore": 4,
+        "black-bog-wood": 1
+      },
+      "outputs": {
+        "black-bog-ingot": 2
+      },
+      "level": 4,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "black-bog-cook",
+      "name": "장어 약초탕 요리",
+      "regionId": "black-bog",
+      "skillId": "cooking",
+      "durationMs": 16000,
+      "inputs": {
+        "black-bog-raw": 4,
+        "black-bog-herb": 1
+      },
+      "outputs": {
+        "black-bog-food": 3
+      },
+      "level": 3,
+      "description": "완성한 음식은 탐험 보급과 전투 중 자동 회복에 쓰인다."
+    },
+    {
+      "id": "black-bog-forge-weapon",
+      "name": "흑철 전투도끼 제작",
+      "regionId": "black-bog",
+      "skillId": "crafting",
+      "durationMs": 32000,
+      "inputs": {
+        "black-bog-ingot": 4,
+        "black-bog-plank": 4,
+        "black-bog-hide": 2
+      },
+      "outputs": {
+        "black-bog-weapon": 1
+      },
+      "level": 4,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "black-bog-sew-armor",
+      "name": "이탄 방한갑옷 제작",
+      "regionId": "black-bog",
+      "skillId": "crafting",
+      "durationMs": 34000,
+      "inputs": {
+        "black-bog-hide": 6,
+        "black-bog-ingot": 2,
+        "black-bog-plank": 2
+      },
+      "outputs": {
+        "black-bog-armor": 1
+      },
+      "level": 4,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "black-bog-carve-charm",
+      "name": "늪돌 봉인부 제작",
+      "regionId": "black-bog",
+      "skillId": "crafting",
+      "durationMs": 25000,
+      "inputs": {
+        "black-bog-stone": 3,
+        "black-bog-herb": 3,
+        "black-bog-plank": 2
+      },
+      "outputs": {
+        "black-bog-charm": 1
+      },
+      "level": 4,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "knife-mountains-saw",
+      "name": "주목 판재 가공",
+      "regionId": "knife-mountains",
+      "skillId": "crafting",
+      "durationMs": 17000,
+      "inputs": {
+        "knife-mountains-wood": 4
+      },
+      "outputs": {
+        "knife-mountains-plank": 2
+      },
+      "level": 5,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "knife-mountains-smelt",
+      "name": "은강 주괴 제련",
+      "regionId": "knife-mountains",
+      "skillId": "crafting",
+      "durationMs": 18000,
+      "inputs": {
+        "knife-mountains-ore": 4,
+        "knife-mountains-wood": 1
+      },
+      "outputs": {
+        "knife-mountains-ingot": 2
+      },
+      "level": 5,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "knife-mountains-cook",
+      "name": "고산 보양식 요리",
+      "regionId": "knife-mountains",
+      "skillId": "cooking",
+      "durationMs": 18000,
+      "inputs": {
+        "knife-mountains-raw": 4,
+        "knife-mountains-herb": 1
+      },
+      "outputs": {
+        "knife-mountains-food": 3
+      },
+      "level": 4,
+      "description": "완성한 음식은 탐험 보급과 전투 중 자동 회복에 쓰인다."
+    },
+    {
+      "id": "knife-mountains-forge-weapon",
+      "name": "은강 장창 제작",
+      "regionId": "knife-mountains",
+      "skillId": "crafting",
+      "durationMs": 36000,
+      "inputs": {
+        "knife-mountains-ingot": 4,
+        "knife-mountains-plank": 4,
+        "knife-mountains-hide": 2
+      },
+      "outputs": {
+        "knife-mountains-weapon": 1
+      },
+      "level": 5,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "knife-mountains-sew-armor",
+      "name": "불곰 방한갑옷 제작",
+      "regionId": "knife-mountains",
+      "skillId": "crafting",
+      "durationMs": 38000,
+      "inputs": {
+        "knife-mountains-hide": 6,
+        "knife-mountains-ingot": 2,
+        "knife-mountains-plank": 2
+      },
+      "outputs": {
+        "knife-mountains-armor": 1
+      },
+      "level": 5,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "knife-mountains-carve-charm",
+      "name": "눈꽃석 펜던트 제작",
+      "regionId": "knife-mountains",
+      "skillId": "crafting",
+      "durationMs": 28000,
+      "inputs": {
+        "knife-mountains-stone": 3,
+        "knife-mountains-herb": 3,
+        "knife-mountains-plank": 2
+      },
+      "outputs": {
+        "knife-mountains-charm": 1
+      },
+      "level": 5,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "aurora-ruins-saw",
+      "name": "고대 판재 가공",
+      "regionId": "aurora-ruins",
+      "skillId": "crafting",
+      "durationMs": 19000,
+      "inputs": {
+        "aurora-ruins-wood": 4
+      },
+      "outputs": {
+        "aurora-ruins-plank": 2
+      },
+      "level": 6,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "aurora-ruins-smelt",
+      "name": "별철 주괴 제련",
+      "regionId": "aurora-ruins",
+      "skillId": "crafting",
+      "durationMs": 20000,
+      "inputs": {
+        "aurora-ruins-ore": 4,
+        "aurora-ruins-wood": 1
+      },
+      "outputs": {
+        "aurora-ruins-ingot": 2
+      },
+      "level": 6,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "aurora-ruins-cook",
+      "name": "극광 만찬 요리",
+      "regionId": "aurora-ruins",
+      "skillId": "cooking",
+      "durationMs": 20000,
+      "inputs": {
+        "aurora-ruins-raw": 4,
+        "aurora-ruins-herb": 1
+      },
+      "outputs": {
+        "aurora-ruins-food": 3
+      },
+      "level": 5,
+      "description": "완성한 음식은 탐험 보급과 전투 중 자동 회복에 쓰인다."
+    },
+    {
+      "id": "aurora-ruins-forge-weapon",
+      "name": "별철 수호창 제작",
+      "regionId": "aurora-ruins",
+      "skillId": "crafting",
+      "durationMs": 40000,
+      "inputs": {
+        "aurora-ruins-ingot": 4,
+        "aurora-ruins-plank": 4,
+        "aurora-ruins-hide": 2
+      },
+      "outputs": {
+        "aurora-ruins-weapon": 1
+      },
+      "level": 6,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "aurora-ruins-sew-armor",
+      "name": "극광 수호갑옷 제작",
+      "regionId": "aurora-ruins",
+      "skillId": "crafting",
+      "durationMs": 42000,
+      "inputs": {
+        "aurora-ruins-hide": 6,
+        "aurora-ruins-ingot": 2,
+        "aurora-ruins-plank": 2
+      },
+      "outputs": {
+        "aurora-ruins-armor": 1
+      },
+      "level": 6,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    },
+    {
+      "id": "aurora-ruins-carve-charm",
+      "name": "봉화의 심장 제작",
+      "regionId": "aurora-ruins",
+      "skillId": "crafting",
+      "durationMs": 31000,
+      "inputs": {
+        "aurora-ruins-stone": 3,
+        "aurora-ruins-herb": 3,
+        "aurora-ruins-plank": 2
+      },
+      "outputs": {
+        "aurora-ruins-charm": 1
+      },
+      "level": 6,
+      "description": "가공 재료와 지역 재료를 조합한다. 중단한 제작은 수비 뒤 이어진다."
+    }
+  ],
+  "regions": [
+    {
+      "id": "rime-shore",
+      "name": "서릿바람 해안",
+      "index": 0,
+      "subtitle": "파도에 밀려온 첫 불씨",
+      "description": "푸른 조수가 검은 바위에 부서진다. 표류한 장작과 작은 어장으로 북방을 향할 채비를 한다.",
+      "story": "꺾인 등대의 불빛 너머로 북방의 짐승들이 남하한다. 당신은 흩어진 마을을 잇는 마지막 길잡이다.",
+      "clearText": "해안을 떠돌던 곰을 밀어냈다. 침엽림으로 이어지는 옛 수렵길이 다시 열렸다.",
+      "art": "landscape",
+      "enemyIds": [
+        "rime-shore-wolf",
+        "rime-shore-boar"
+      ],
+      "bossId": "rime-shore-boss",
+      "foodCost": 1,
+      "foodQuality": 1,
+      "encountersToBoss": 3,
+      "travelMs": 8000,
+      "raidIntervalMs": 300000,
+      "requirements": {
+        "attack": 12,
+        "defense": 5,
+        "warmth": 1,
+        "combatLevel": 1
+      },
+      "recommendedGear": [
+        "rime-shore-weapon",
+        "rime-shore-armor",
+        "rime-shore-charm"
+      ],
+      "recommendedFood": "rime-shore-food",
+      "nextRegionId": "pinewood"
+    },
+    {
+      "id": "pinewood",
+      "name": "검푸른 침엽림",
+      "index": 1,
+      "subtitle": "흔적을 남기는 겨울 숲",
+      "description": "눈 덮인 전나무 사이로 수지 냄새가 흐른다. 짐승의 발자국을 따라 깊은 숲의 재료를 얻는다.",
+      "story": "숲의 새들이 북쪽을 등지고 날아온다. 오래된 지도에 없던 빛이 밤하늘에 번지고 있다.",
+      "clearText": "숲을 지키던 큰곰이 물러났다. 얼어붙은 호수로 향하는 길을 찾았다.",
+      "art": "landscape",
+      "enemyIds": [
+        "pinewood-wolf",
+        "pinewood-boar"
+      ],
+      "bossId": "pinewood-boss",
+      "foodCost": 1,
+      "foodQuality": 2,
+      "encountersToBoss": 3,
+      "travelMs": 9500,
+      "raidIntervalMs": 285000,
+      "requirements": {
+        "attack": 24,
+        "defense": 12,
+        "warmth": 3,
+        "combatLevel": 2
+      },
+      "recommendedGear": [
+        "pinewood-weapon",
+        "pinewood-armor",
+        "pinewood-charm"
+      ],
+      "recommendedFood": "pinewood-food",
+      "nextRegionId": "frozen-lake"
+    },
+    {
+      "id": "frozen-lake",
+      "name": "얼어붙은 호수",
+      "index": 2,
+      "subtitle": "얼음 밑에서 들려오는 울림",
+      "description": "유리 같은 호수 위로 바람이 달린다. 얕은 균열에서 강철 광석과 귀한 얼음 송어를 찾는다.",
+      "story": "호수 한가운데 서리뿔의 발자국이 원을 그린다. 얼음 속에는 오래된 봉화 장치가 잠들어 있다.",
+      "clearText": "서리뿔 큰사슴을 피해 봉화를 깨웠다. 얼음의 울림이 이탄습지로 향하는 길을 가리킨다.",
+      "art": "landscape",
+      "enemyIds": [
+        "frozen-lake-wolf",
+        "frozen-lake-stag"
+      ],
+      "bossId": "frozen-lake-boss",
+      "foodCost": 1,
+      "foodQuality": 3,
+      "encountersToBoss": 4,
+      "travelMs": 11000,
+      "raidIntervalMs": 270000,
+      "requirements": {
+        "attack": 37,
+        "defense": 19,
+        "warmth": 5,
+        "combatLevel": 3
+      },
+      "recommendedGear": [
+        "frozen-lake-weapon",
+        "frozen-lake-armor",
+        "frozen-lake-charm"
+      ],
+      "recommendedFood": "frozen-lake-food",
+      "nextRegionId": "black-bog"
+    },
+    {
+      "id": "black-bog",
+      "name": "검은 이탄습지",
+      "index": 3,
+      "subtitle": "발밑에서 숨 쉬는 땅",
+      "description": "흑갈색 늪 위로 낮은 안개가 흐른다. 이탄과 늪철을 다루는 기술이 험한 북방을 견디게 한다.",
+      "story": "습지의 물길은 모두 북쪽으로 거슬러 흐른다. 물속에서 꺼낸 돌에는 사라진 수호자의 문장이 남아 있다.",
+      "clearText": "거대한 멧돼지를 막고 늪의 다리를 연결했다. 칼바람 산맥의 설벽이 눈앞에 드러난다.",
+      "art": "landscape",
+      "enemyIds": [
+        "black-bog-boar",
+        "black-bog-bear"
+      ],
+      "bossId": "black-bog-boss",
+      "foodCost": 1,
+      "foodQuality": 4,
+      "encountersToBoss": 4,
+      "travelMs": 12500,
+      "raidIntervalMs": 255000,
+      "requirements": {
+        "attack": 50,
+        "defense": 26,
+        "warmth": 7,
+        "combatLevel": 4
+      },
+      "recommendedGear": [
+        "black-bog-weapon",
+        "black-bog-armor",
+        "black-bog-charm"
+      ],
+      "recommendedFood": "black-bog-food",
+      "nextRegionId": "knife-mountains"
+    },
+    {
+      "id": "knife-mountains",
+      "name": "칼바람 산맥",
+      "index": 4,
+      "subtitle": "구름 위의 흰 길",
+      "description": "눈보라가 가파른 능선을 깎는다. 은빛 광맥과 끈질긴 주목을 찾아 유적을 향할 장비를 만든다.",
+      "story": "남하한 짐승들은 먹이가 아니라 이 빛을 피해 달아났다. 산 너머 북극광 한가운데에서 낡은 기계가 깨어나고 있다.",
+      "clearText": "고산 불곰을 넘어 마지막 고갯길을 열었다. 북극광 유적의 심장이 모습을 드러냈다.",
+      "art": "landscape",
+      "enemyIds": [
+        "knife-mountains-bear",
+        "knife-mountains-wolf"
+      ],
+      "bossId": "knife-mountains-boss",
+      "foodCost": 1,
+      "foodQuality": 5,
+      "encountersToBoss": 4,
+      "travelMs": 14000,
+      "raidIntervalMs": 240000,
+      "requirements": {
+        "attack": 64,
+        "defense": 33,
+        "warmth": 9,
+        "combatLevel": 5
+      },
+      "recommendedGear": [
+        "knife-mountains-weapon",
+        "knife-mountains-armor",
+        "knife-mountains-charm"
+      ],
+      "recommendedFood": "knife-mountains-food",
+      "nextRegionId": "aurora-ruins"
+    },
+    {
+      "id": "aurora-ruins",
+      "name": "북극광 유적",
+      "index": 5,
+      "subtitle": "마지막 봉화의 수호자",
+      "description": "푸른 빛이 무너진 돌기둥을 감싼다. 별철과 고대 목재로 마지막 위협을 버틸 장비를 완성한다.",
+      "story": "수호 장치는 길잡이를 적으로 오인했다. 봉화를 되살려 북방을 지키던 빛을 다시 제자리로 돌려야 한다.",
+      "clearText": "수호자의 폭주를 멈추고 여섯 봉화를 연결했다. 짐승들은 북쪽 보금자리로 돌아가고, 마을마다 따뜻한 불이 켜진다. 당신의 북방 여정은 끝났지만 길을 지키는 일은 계속된다.",
+      "art": "landscape",
+      "enemyIds": [
+        "aurora-ruins-wolf",
+        "aurora-ruins-bear"
+      ],
+      "bossId": "aurora-ruins-boss",
+      "foodCost": 1,
+      "foodQuality": 6,
+      "encountersToBoss": 4,
+      "travelMs": 15500,
+      "raidIntervalMs": 225000,
+      "requirements": {
+        "attack": 78,
+        "defense": 40,
+        "warmth": 11,
+        "combatLevel": 6
+      },
+      "recommendedGear": [
+        "aurora-ruins-weapon",
+        "aurora-ruins-armor",
+        "aurora-ruins-charm"
+      ],
+      "recommendedFood": "aurora-ruins-food",
+      "nextRegionId": null
+    }
+  ],
+  "enemies": [
+    {
+      "id": "rime-shore-wolf",
+      "name": "해안 눈빛 늑대",
+      "maxHp": 52,
+      "attack": 10,
+      "defense": 2,
+      "attackMs": 2600,
+      "art": "wolf",
+      "loot": {
+        "rime-shore-raw": 2,
+        "rime-shore-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "rime-shore-boar",
+      "name": "해안 거친 멧돼지",
+      "maxHp": 58,
+      "attack": 12,
+      "defense": 3,
+      "attackMs": 2750,
+      "art": "boar",
+      "loot": {
+        "rime-shore-raw": 2,
+        "rime-shore-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "rime-shore-boss",
+      "name": "해안의 떠돌이 불곰",
+      "maxHp": 140,
+      "attack": 15,
+      "defense": 5,
+      "attackMs": 2850,
+      "art": "bear",
+      "loot": {
+        "rime-shore-trophy": 1,
+        "rime-shore-ore": 6,
+        "rime-shore-stone": 2
+      },
+      "description": "이 지역의 길을 막고 있는 큰 야생 동물."
+    },
+    {
+      "id": "pinewood-wolf",
+      "name": "침엽림 눈빛 늑대",
+      "maxHp": 110,
+      "attack": 19,
+      "defense": 6,
+      "attackMs": 2600,
+      "art": "wolf",
+      "loot": {
+        "pinewood-raw": 2,
+        "pinewood-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "pinewood-boar",
+      "name": "침엽림 거친 멧돼지",
+      "maxHp": 123,
+      "attack": 21,
+      "defense": 7,
+      "attackMs": 2750,
+      "art": "boar",
+      "loot": {
+        "pinewood-raw": 2,
+        "pinewood-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "pinewood-boss",
+      "name": "침엽림의 흰무늬 큰곰",
+      "maxHp": 297,
+      "attack": 24,
+      "defense": 9,
+      "attackMs": 2850,
+      "art": "bear",
+      "loot": {
+        "pinewood-trophy": 1,
+        "pinewood-ore": 6,
+        "pinewood-stone": 2
+      },
+      "description": "이 지역의 길을 막고 있는 큰 야생 동물."
+    },
+    {
+      "id": "frozen-lake-wolf",
+      "name": "호수 눈빛 늑대",
+      "maxHp": 175,
+      "attack": 29,
+      "defense": 10,
+      "attackMs": 2600,
+      "art": "wolf",
+      "loot": {
+        "frozen-lake-raw": 2,
+        "frozen-lake-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "frozen-lake-stag",
+      "name": "호수 설원 큰사슴",
+      "maxHp": 196,
+      "attack": 31,
+      "defense": 11,
+      "attackMs": 2750,
+      "art": "stag",
+      "loot": {
+        "frozen-lake-raw": 2,
+        "frozen-lake-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "frozen-lake-boss",
+      "name": "호수의 서리뿔 큰사슴",
+      "maxHp": 473,
+      "attack": 34,
+      "defense": 13,
+      "attackMs": 2850,
+      "art": "stag",
+      "loot": {
+        "frozen-lake-trophy": 1,
+        "frozen-lake-ore": 6,
+        "frozen-lake-stone": 2
+      },
+      "description": "이 지역의 길을 막고 있는 큰 야생 동물."
+    },
+    {
+      "id": "black-bog-boar",
+      "name": "이탄습지 거친 멧돼지",
+      "maxHp": 245,
+      "attack": 39,
+      "defense": 15,
+      "attackMs": 2600,
+      "art": "boar",
+      "loot": {
+        "black-bog-raw": 2,
+        "black-bog-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "black-bog-bear",
+      "name": "이탄습지 북방 불곰",
+      "maxHp": 274,
+      "attack": 41,
+      "defense": 16,
+      "attackMs": 2750,
+      "art": "bear",
+      "loot": {
+        "black-bog-raw": 2,
+        "black-bog-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "black-bog-boss",
+      "name": "검은 늪의 거대 멧돼지",
+      "maxHp": 662,
+      "attack": 44,
+      "defense": 18,
+      "attackMs": 2850,
+      "art": "boar",
+      "loot": {
+        "black-bog-trophy": 1,
+        "black-bog-ore": 6,
+        "black-bog-stone": 2
+      },
+      "description": "이 지역의 길을 막고 있는 큰 야생 동물."
+    },
+    {
+      "id": "knife-mountains-bear",
+      "name": "산맥 북방 불곰",
+      "maxHp": 330,
+      "attack": 51,
+      "defense": 21,
+      "attackMs": 2600,
+      "art": "bear",
+      "loot": {
+        "knife-mountains-raw": 2,
+        "knife-mountains-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "knife-mountains-wolf",
+      "name": "산맥 눈빛 늑대",
+      "maxHp": 370,
+      "attack": 53,
+      "defense": 22,
+      "attackMs": 2750,
+      "art": "wolf",
+      "loot": {
+        "knife-mountains-raw": 2,
+        "knife-mountains-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "knife-mountains-boss",
+      "name": "능선의 고산 불곰",
+      "maxHp": 891,
+      "attack": 56,
+      "defense": 24,
+      "attackMs": 2850,
+      "art": "bear",
+      "loot": {
+        "knife-mountains-trophy": 1,
+        "knife-mountains-ore": 6,
+        "knife-mountains-stone": 2
+      },
+      "description": "이 지역의 길을 막고 있는 큰 야생 동물."
+    },
+    {
+      "id": "aurora-ruins-wolf",
+      "name": "유적 눈빛 늑대",
+      "maxHp": 430,
+      "attack": 64,
+      "defense": 27,
+      "attackMs": 2600,
+      "art": "wolf",
+      "loot": {
+        "aurora-ruins-raw": 2,
+        "aurora-ruins-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "aurora-ruins-bear",
+      "name": "유적 북방 불곰",
+      "maxHp": 482,
+      "attack": 66,
+      "defense": 28,
+      "attackMs": 2750,
+      "art": "bear",
+      "loot": {
+        "aurora-ruins-raw": 2,
+        "aurora-ruins-hide": 1
+      },
+      "description": "북방의 길을 따라 내려온 야생 동물."
+    },
+    {
+      "id": "aurora-ruins-boss",
+      "name": "폭주한 봉화 수호자",
+      "maxHp": 1161,
+      "attack": 69,
+      "defense": 30,
+      "attackMs": 2850,
+      "art": "guardian",
+      "loot": {
+        "aurora-ruins-trophy": 1,
+        "aurora-ruins-ore": 6,
+        "aurora-ruins-stone": 2
+      },
+      "description": "옛 봉화를 지키던 돌과 별철의 수호 장치. 북방을 다시 평온하게 만들 마지막 위협."
+    }
+  ],
+  "town": {
+    "tickMs": 60000,
+    "baseStorage": 100,
+    "resources": [
+      {
+        "id": "food",
+        "name": "마을 식량",
+        "icon": "food",
+        "description": "주민의 생활과 공방의 원료를 지원합니다.",
+        "weight": 1
+      },
+      {
+        "id": "fuel",
+        "name": "장작 연료",
+        "icon": "fire",
+        "description": "주민의 온기와 제련·식당의 불을 유지합니다.",
+        "weight": 1
+      },
+      {
+        "id": "wood",
+        "name": "거점 목재",
+        "icon": "wood",
+        "description": "시설 건설과 제재소 가공에 사용합니다.",
+        "weight": 1
+      },
+      {
+        "id": "stone",
+        "name": "건축 돌",
+        "icon": "ore",
+        "description": "기초와 창고를 확장합니다.",
+        "weight": 1
+      },
+      {
+        "id": "ore",
+        "name": "거점 광석",
+        "icon": "ore",
+        "description": "제련소에서 금속으로 가공합니다.",
+        "weight": 1
+      },
+      {
+        "id": "plank",
+        "name": "건축 판재",
+        "icon": "wood",
+        "description": "상위 시설을 짓는 가공 재료입니다.",
+        "weight": 1
+      },
+      {
+        "id": "metal",
+        "name": "건축 금속",
+        "icon": "hammer",
+        "description": "시설과 경비 장비를 강화합니다.",
+        "weight": 1
+      },
+      {
+        "id": "herbs",
+        "name": "생활 약초",
+        "icon": "leaf",
+        "description": "주민의 건강과 식당·직물 공방을 지원합니다.",
+        "weight": 1
+      },
+      {
+        "id": "cloth",
+        "name": "생활 직물",
+        "icon": "paw",
+        "description": "따뜻한 주택과 고급 시설에 사용합니다.",
+        "weight": 1
+      },
+      {
+        "id": "provisions",
+        "name": "거점 보급품",
+        "icon": "food",
+        "description": "교역으로 여행자의 지역별 음식과 바꿉니다.",
+        "weight": 1
+      }
+    ],
+    "initialResources": {
+      "food": 25,
+      "fuel": 20,
+      "wood": 30,
+      "stone": 20,
+      "ore": 10,
+      "herbs": 10
+    },
+    "initialCoins": 100,
+    "initialBuildings": {
+      "housing": 1,
+      "woodcutters": 1,
+      "quarry": 1,
+      "fishery": 1,
+      "storehouse": 1
+    },
+    "initialPopulation": 4,
+    "buildings": [
+      {
+        "id": "housing",
+        "name": "여행자의 주택",
+        "icon": "camp",
+        "category": "생활",
+        "description": "주민이 머물 영구 거처를 늘립니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 8,
+            "education": 0,
+            "happiness": 4,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 16,
+            "education": 0,
+            "happiness": 8,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 24,
+            "education": 0,
+            "happiness": 12,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 32,
+            "education": 0,
+            "happiness": 16,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 40,
+            "education": 0,
+            "happiness": 20,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 48,
+            "education": 0,
+            "happiness": 24,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "woodcutters",
+        "name": "벌목소",
+        "icon": "wood",
+        "category": "생산",
+        "description": "목재와 연료를 꾸준히 생산합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "wood": 8,
+              "fuel": 6
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "wood": 16,
+              "fuel": 12
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "wood": 24,
+              "fuel": 18
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "wood": 32,
+              "fuel": 24
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "wood": 40,
+              "fuel": 30
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "wood": 48,
+              "fuel": 36
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "quarry",
+        "name": "채석 광산",
+        "icon": "ore",
+        "category": "생산",
+        "description": "돌과 광석을 모읍니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "stone": 6,
+              "ore": 6
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "stone": 12,
+              "ore": 12
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "stone": 18,
+              "ore": 18
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "stone": 24,
+              "ore": 24
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "stone": 30,
+              "ore": 30
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "stone": 36,
+              "ore": 36
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "fishery",
+        "name": "거점 어장",
+        "icon": "fish",
+        "category": "생산",
+        "description": "주민의 식량을 생산합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "food": 12
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "food": 24
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "food": 36
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "food": 48
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "food": 60
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "food": 72
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "sawmill",
+        "name": "제재소",
+        "icon": "hammer",
+        "category": "가공",
+        "description": "목재를 건축 판재로 가공합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "plank": 3
+            },
+            "inputs": {
+              "wood": 4
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "workSpeedBps": 80
+            }
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "plank": 6
+            },
+            "inputs": {
+              "wood": 8
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "workSpeedBps": 160
+            }
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "plank": 9
+            },
+            "inputs": {
+              "wood": 12
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "workSpeedBps": 240
+            }
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "plank": 12
+            },
+            "inputs": {
+              "wood": 16
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "workSpeedBps": 320
+            }
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "plank": 15
+            },
+            "inputs": {
+              "wood": 20
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "workSpeedBps": 400
+            }
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "plank": 18
+            },
+            "inputs": {
+              "wood": 24
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "workSpeedBps": 480
+            }
+          }
+        ]
+      },
+      {
+        "id": "smithy",
+        "name": "거점 제련소",
+        "icon": "fire",
+        "category": "가공",
+        "description": "광석과 연료를 건축 금속으로 가공합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "metal": 3
+            },
+            "inputs": {
+              "ore": 4,
+              "fuel": 1
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "metal": 6
+            },
+            "inputs": {
+              "ore": 8,
+              "fuel": 2
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "metal": 9
+            },
+            "inputs": {
+              "ore": 12,
+              "fuel": 3
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "metal": 12
+            },
+            "inputs": {
+              "ore": 16,
+              "fuel": 4
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "metal": 15
+            },
+            "inputs": {
+              "ore": 20,
+              "fuel": 5
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "metal": 18
+            },
+            "inputs": {
+              "ore": 24,
+              "fuel": 6
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "kitchen",
+        "name": "공동 식당",
+        "icon": "food",
+        "category": "보급",
+        "description": "식량·연료·약초를 원정 보급품으로 바꿉니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "provisions": 3
+            },
+            "inputs": {
+              "food": 4,
+              "fuel": 1,
+              "herbs": 1
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "provisions": 6
+            },
+            "inputs": {
+              "food": 8,
+              "fuel": 2,
+              "herbs": 2
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "provisions": 9
+            },
+            "inputs": {
+              "food": 12,
+              "fuel": 3,
+              "herbs": 3
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "provisions": 12
+            },
+            "inputs": {
+              "food": 16,
+              "fuel": 4,
+              "herbs": 4
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "provisions": 15
+            },
+            "inputs": {
+              "food": 20,
+              "fuel": 5,
+              "herbs": 5
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "provisions": 18
+            },
+            "inputs": {
+              "food": 24,
+              "fuel": 6,
+              "herbs": 6
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "herbalist",
+        "name": "생활 약방",
+        "icon": "leaf",
+        "category": "생활",
+        "description": "약초를 모으고 주민의 건강을 지원합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "herbs": 5
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 5,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "herbs": 10
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 10,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "herbs": 15
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 15,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "herbs": 20
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 20,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "herbs": 25
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 25,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "herbs": 30
+            },
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 30,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "weaver",
+        "name": "직물 공방",
+        "icon": "paw",
+        "category": "가공",
+        "description": "식량과 식물 섬유로 생활 직물을 만듭니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {
+              "cloth": 3
+            },
+            "inputs": {
+              "herbs": 1,
+              "food": 1
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 4,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {
+              "cloth": 6
+            },
+            "inputs": {
+              "herbs": 2,
+              "food": 2
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 8,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {
+              "cloth": 9
+            },
+            "inputs": {
+              "herbs": 3,
+              "food": 3
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 12,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {
+              "cloth": 12
+            },
+            "inputs": {
+              "herbs": 4,
+              "food": 4
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 16,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {
+              "cloth": 15
+            },
+            "inputs": {
+              "herbs": 5,
+              "food": 5
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 20,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {
+              "cloth": 18
+            },
+            "inputs": {
+              "herbs": 6,
+              "food": 6
+            },
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 24,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "storehouse",
+        "name": "공동 창고",
+        "icon": "backpack",
+        "category": "생활",
+        "description": "영구 창고의 수용량을 늘립니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 6,
+                "stone": 4
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 200,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 24,
+                "stone": 16,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 800,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 54,
+                "stone": 36,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 1800,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 96,
+                "stone": 64,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 3200,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 150,
+                "stone": 100,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 5000,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 216,
+                "stone": 144,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 7200,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "market",
+        "name": "봉화 시장",
+        "icon": "scroll",
+        "category": "교역",
+        "description": "교역 비용을 낮추고 주민의 세금 수입을 늘립니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 5,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 1,
+            "tradeDiscountBps": 300,
+            "bonuses": {}
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 10,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 2,
+            "tradeDiscountBps": 600,
+            "bonuses": {}
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 15,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 3,
+            "tradeDiscountBps": 900,
+            "bonuses": {}
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 20,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 4,
+            "tradeDiscountBps": 1200,
+            "bonuses": {}
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 25,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 5,
+            "tradeDiscountBps": 1500,
+            "bonuses": {}
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 30,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 6,
+            "tradeDiscountBps": 1800,
+            "bonuses": {}
+          }
+        ]
+      },
+      {
+        "id": "watchtower",
+        "name": "봉화 경비소",
+        "icon": "shield",
+        "category": "수비",
+        "description": "여행자의 다음 전투에 작은 영구 보너스를 제공합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "requirements": {
+              "clearedRegions": 0,
+              "townLevel": 1,
+              "population": 2
+            },
+            "cost": {
+              "resources": {
+                "wood": 8,
+                "stone": 5
+              },
+              "items": {},
+              "coins": 20
+            },
+            "durationMs": 30000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "attack": 0.5,
+              "defense": 0.5,
+              "maxHp": 2,
+              "warmth": 0
+            }
+          },
+          {
+            "level": 2,
+            "requirements": {
+              "clearedRegions": 1,
+              "townLevel": 2,
+              "population": 4
+            },
+            "cost": {
+              "resources": {
+                "wood": 32,
+                "stone": 20,
+                "plank": 8
+              },
+              "items": {},
+              "coins": 80
+            },
+            "durationMs": 60000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "attack": 1.0,
+              "defense": 1.0,
+              "maxHp": 4,
+              "warmth": 0
+            }
+          },
+          {
+            "level": 3,
+            "requirements": {
+              "clearedRegions": 2,
+              "townLevel": 3,
+              "population": 6
+            },
+            "cost": {
+              "resources": {
+                "wood": 72,
+                "stone": 45,
+                "plank": 12,
+                "metal": 6
+              },
+              "items": {},
+              "coins": 180
+            },
+            "durationMs": 90000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "attack": 1.5,
+              "defense": 1.5,
+              "maxHp": 6,
+              "warmth": 1
+            }
+          },
+          {
+            "level": 4,
+            "requirements": {
+              "clearedRegions": 3,
+              "townLevel": 4,
+              "population": 8
+            },
+            "cost": {
+              "resources": {
+                "wood": 128,
+                "stone": 80,
+                "plank": 16,
+                "metal": 8,
+                "cloth": 12
+              },
+              "items": {},
+              "coins": 320
+            },
+            "durationMs": 120000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "attack": 2.0,
+              "defense": 2.0,
+              "maxHp": 8,
+              "warmth": 1
+            }
+          },
+          {
+            "level": 5,
+            "requirements": {
+              "clearedRegions": 4,
+              "townLevel": 5,
+              "population": 10
+            },
+            "cost": {
+              "resources": {
+                "wood": 200,
+                "stone": 125,
+                "plank": 20,
+                "metal": 10,
+                "cloth": 15
+              },
+              "items": {},
+              "coins": 500
+            },
+            "durationMs": 150000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "attack": 2.5,
+              "defense": 2.5,
+              "maxHp": 10,
+              "warmth": 1
+            }
+          },
+          {
+            "level": 6,
+            "requirements": {
+              "clearedRegions": 5,
+              "townLevel": 6,
+              "population": 12
+            },
+            "cost": {
+              "resources": {
+                "wood": 288,
+                "stone": 180,
+                "plank": 24,
+                "metal": 12,
+                "cloth": 18
+              },
+              "items": {},
+              "coins": 720
+            },
+            "durationMs": 180000,
+            "outputs": {},
+            "inputs": {},
+            "storage": 0,
+            "populationCapacity": 0,
+            "education": 0,
+            "happiness": 0,
+            "health": 0,
+            "taxBonus": 0,
+            "tradeDiscountBps": 0,
+            "bonuses": {
+              "attack": 3.0,
+              "defense": 3.0,
+              "maxHp": 12,
+              "warmth": 2
+            }
+          }
+        ]
+      }
+    ],
+    "trades": [
+      {
+        "id": "supply-rime-shore",
+        "name": "서릿바람 해안 음식 교역",
+        "description": "거점 보급품을 품질 1 음식으로 교역합니다.",
+        "quality": 1,
+        "requirements": {
+          "regionId": "rime-shore",
+          "buildings": {
+            "kitchen": 1
+          }
+        },
+        "cost": {
+          "resources": {
+            "provisions": 3
+          },
+          "items": {},
+          "coins": 1
+        },
+        "outputs": {
+          "items": {
+            "rime-shore-food": 3
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "seed-rime-shore",
+        "name": "서릿바람 해안 씨앗 구입",
+        "description": "독립 농사에 쓰는 유한한 씨앗 한 봉지를 구입합니다.",
+        "requirements": {
+          "regionId": "rime-shore"
+        },
+        "cost": {
+          "resources": {},
+          "items": {},
+          "coins": 4
+        },
+        "outputs": {
+          "items": {
+            "seed-rime-shore": 1
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "material-rime-shore",
+        "name": "서릿바람 해안 원료 교역",
+        "description": "마을의 잉여 원료로 해금한 지역 원료를 교역합니다.",
+        "requirements": {
+          "regionId": "rime-shore",
+          "buildings": {
+            "market": 1
+          }
+        },
+        "cost": {
+          "resources": {
+            "wood": 3,
+            "ore": 3
+          },
+          "items": {},
+          "coins": 2
+        },
+        "outputs": {
+          "items": {
+            "rime-shore-wood": 2,
+            "rime-shore-ore": 2
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "supply-pinewood",
+        "name": "검푸른 침엽림 음식 교역",
+        "description": "거점 보급품을 품질 2 음식으로 교역합니다.",
+        "quality": 2,
+        "requirements": {
+          "regionId": "pinewood",
+          "buildings": {
+            "kitchen": 2
+          }
+        },
+        "cost": {
+          "resources": {
+            "provisions": 4
+          },
+          "items": {},
+          "coins": 2
+        },
+        "outputs": {
+          "items": {
+            "pinewood-food": 3
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "seed-pinewood",
+        "name": "검푸른 침엽림 씨앗 구입",
+        "description": "독립 농사에 쓰는 유한한 씨앗 한 봉지를 구입합니다.",
+        "requirements": {
+          "regionId": "pinewood"
+        },
+        "cost": {
+          "resources": {},
+          "items": {},
+          "coins": 8
+        },
+        "outputs": {
+          "items": {
+            "seed-pinewood": 1
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "material-pinewood",
+        "name": "검푸른 침엽림 원료 교역",
+        "description": "마을의 잉여 원료로 해금한 지역 원료를 교역합니다.",
+        "requirements": {
+          "regionId": "pinewood",
+          "buildings": {
+            "market": 1
+          }
+        },
+        "cost": {
+          "resources": {
+            "wood": 6,
+            "ore": 6
+          },
+          "items": {},
+          "coins": 4
+        },
+        "outputs": {
+          "items": {
+            "pinewood-wood": 2,
+            "pinewood-ore": 2
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "supply-frozen-lake",
+        "name": "얼어붙은 호수 음식 교역",
+        "description": "거점 보급품을 품질 3 음식으로 교역합니다.",
+        "quality": 3,
+        "requirements": {
+          "regionId": "frozen-lake",
+          "buildings": {
+            "kitchen": 3
+          }
+        },
+        "cost": {
+          "resources": {
+            "provisions": 5
+          },
+          "items": {},
+          "coins": 3
+        },
+        "outputs": {
+          "items": {
+            "frozen-lake-food": 3
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "seed-frozen-lake",
+        "name": "얼어붙은 호수 씨앗 구입",
+        "description": "독립 농사에 쓰는 유한한 씨앗 한 봉지를 구입합니다.",
+        "requirements": {
+          "regionId": "frozen-lake"
+        },
+        "cost": {
+          "resources": {},
+          "items": {},
+          "coins": 12
+        },
+        "outputs": {
+          "items": {
+            "seed-frozen-lake": 1
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "material-frozen-lake",
+        "name": "얼어붙은 호수 원료 교역",
+        "description": "마을의 잉여 원료로 해금한 지역 원료를 교역합니다.",
+        "requirements": {
+          "regionId": "frozen-lake",
+          "buildings": {
+            "market": 2
+          }
+        },
+        "cost": {
+          "resources": {
+            "wood": 9,
+            "ore": 9
+          },
+          "items": {},
+          "coins": 6
+        },
+        "outputs": {
+          "items": {
+            "frozen-lake-wood": 2,
+            "frozen-lake-ore": 2
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "supply-black-bog",
+        "name": "검은 이탄습지 음식 교역",
+        "description": "거점 보급품을 품질 4 음식으로 교역합니다.",
+        "quality": 4,
+        "requirements": {
+          "regionId": "black-bog",
+          "buildings": {
+            "kitchen": 4
+          }
+        },
+        "cost": {
+          "resources": {
+            "provisions": 6
+          },
+          "items": {},
+          "coins": 4
+        },
+        "outputs": {
+          "items": {
+            "black-bog-food": 3
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "seed-black-bog",
+        "name": "검은 이탄습지 씨앗 구입",
+        "description": "독립 농사에 쓰는 유한한 씨앗 한 봉지를 구입합니다.",
+        "requirements": {
+          "regionId": "black-bog"
+        },
+        "cost": {
+          "resources": {},
+          "items": {},
+          "coins": 16
+        },
+        "outputs": {
+          "items": {
+            "seed-black-bog": 1
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "material-black-bog",
+        "name": "검은 이탄습지 원료 교역",
+        "description": "마을의 잉여 원료로 해금한 지역 원료를 교역합니다.",
+        "requirements": {
+          "regionId": "black-bog",
+          "buildings": {
+            "market": 3
+          }
+        },
+        "cost": {
+          "resources": {
+            "wood": 12,
+            "ore": 12
+          },
+          "items": {},
+          "coins": 8
+        },
+        "outputs": {
+          "items": {
+            "black-bog-wood": 2,
+            "black-bog-ore": 2
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "supply-knife-mountains",
+        "name": "칼바람 산맥 음식 교역",
+        "description": "거점 보급품을 품질 5 음식으로 교역합니다.",
+        "quality": 5,
+        "requirements": {
+          "regionId": "knife-mountains",
+          "buildings": {
+            "kitchen": 5
+          }
+        },
+        "cost": {
+          "resources": {
+            "provisions": 7
+          },
+          "items": {},
+          "coins": 5
+        },
+        "outputs": {
+          "items": {
+            "knife-mountains-food": 3
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "seed-knife-mountains",
+        "name": "칼바람 산맥 씨앗 구입",
+        "description": "독립 농사에 쓰는 유한한 씨앗 한 봉지를 구입합니다.",
+        "requirements": {
+          "regionId": "knife-mountains"
+        },
+        "cost": {
+          "resources": {},
+          "items": {},
+          "coins": 20
+        },
+        "outputs": {
+          "items": {
+            "seed-knife-mountains": 1
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "material-knife-mountains",
+        "name": "칼바람 산맥 원료 교역",
+        "description": "마을의 잉여 원료로 해금한 지역 원료를 교역합니다.",
+        "requirements": {
+          "regionId": "knife-mountains",
+          "buildings": {
+            "market": 4
+          }
+        },
+        "cost": {
+          "resources": {
+            "wood": 15,
+            "ore": 15
+          },
+          "items": {},
+          "coins": 10
+        },
+        "outputs": {
+          "items": {
+            "knife-mountains-wood": 2,
+            "knife-mountains-ore": 2
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "supply-aurora-ruins",
+        "name": "북극광 유적 음식 교역",
+        "description": "거점 보급품을 품질 6 음식으로 교역합니다.",
+        "quality": 6,
+        "requirements": {
+          "regionId": "aurora-ruins",
+          "buildings": {
+            "kitchen": 6
+          }
+        },
+        "cost": {
+          "resources": {
+            "provisions": 8
+          },
+          "items": {},
+          "coins": 6
+        },
+        "outputs": {
+          "items": {
+            "aurora-ruins-food": 3
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "seed-aurora-ruins",
+        "name": "북극광 유적 씨앗 구입",
+        "description": "독립 농사에 쓰는 유한한 씨앗 한 봉지를 구입합니다.",
+        "requirements": {
+          "regionId": "aurora-ruins"
+        },
+        "cost": {
+          "resources": {},
+          "items": {},
+          "coins": 24
+        },
+        "outputs": {
+          "items": {
+            "seed-aurora-ruins": 1
+          }
+        },
+        "cooldownMs": 0
+      },
+      {
+        "id": "material-aurora-ruins",
+        "name": "북극광 유적 원료 교역",
+        "description": "마을의 잉여 원료로 해금한 지역 원료를 교역합니다.",
+        "requirements": {
+          "regionId": "aurora-ruins",
+          "buildings": {
+            "market": 5
+          }
+        },
+        "cost": {
+          "resources": {
+            "wood": 18,
+            "ore": 18
+          },
+          "items": {},
+          "coins": 12
+        },
+        "outputs": {
+          "items": {
+            "aurora-ruins-wood": 2,
+            "aurora-ruins-ore": 2
+          }
+        },
+        "cooldownMs": 0
+      }
+    ],
+    "settings": {
+      "xpDivisor": 50,
+      "maxLevel": 30,
+      "basePopulationCapacity": 2,
+      "populationGrowth": 1,
+      "foodPerResidents": 8,
+      "fuelPerResidents": 12,
+      "minEfficiencyBps": 2500,
+      "shortageEfficiencyBps": 6000,
+      "baseHealth": 70,
+      "baseHappiness": 50,
+      "baseEducation": 0,
+      "conditionDecayBps": 20,
+      "conditionFloorBps": 8000,
+      "repairCostBps": 2000,
+      "taxPerResident": 1,
+      "maxAutoSupplyStock": 10000,
+      "donationUnitsPerCoin": 4,
+      "seedDropEveryCycles": 8,
+      "baseEfficiencyBps": 6000,
+      "healthEfficiencyBps": 20,
+      "happinessEfficiencyBps": 20,
+      "educationEfficiencyBps": 10,
+      "maxTradeDiscountBps": 5000,
+      "priorityStorageSharesBps": [
+        1200,
+        1200,
+        1100,
+        1100,
+        1000,
+        1000,
+        900,
+        900,
+        800,
+        800
+      ]
+    }
+  },
+  "mastery": {
+    "xpPerCycle": 10,
+    "xpDivisor": 50,
+    "maxLevel": 20,
+    "speedBpsPerLevel": 80,
+    "yieldBpsPerLevel": 100,
+    "maxSpeedBonusBps": 1500,
+    "maxYieldBonusBps": 1900,
+    "combinedWorkSpeedCapBps": 3000
+  },
+  "farming": {
+    "plots": [
+      {
+        "id": "plot-1",
+        "name": "설원 텃밭 1",
+        "requirements": {
+          "clearedRegions": 0
+        }
+      },
+      {
+        "id": "plot-2",
+        "name": "설원 텃밭 2",
+        "requirements": {
+          "clearedRegions": 1
+        }
+      },
+      {
+        "id": "plot-3",
+        "name": "설원 텃밭 3",
+        "requirements": {
+          "clearedRegions": 2
+        }
+      },
+      {
+        "id": "plot-4",
+        "name": "설원 텃밭 4",
+        "requirements": {
+          "clearedRegions": 3
+        }
+      }
+    ],
+    "crops": [
+      {
+        "id": "crop-rime-shore",
+        "name": "소금풀과 해안 콩",
+        "regionId": "rime-shore",
+        "durationMs": 180000,
+        "inputs": {
+          "seed-rime-shore": 1
+        },
+        "outputs": {
+          "rime-shore-raw": 8,
+          "rime-shore-herb": 3
+        },
+        "description": "심어 둔 작물은 탐험과 수비 중에도 자랍니다. 자동 재파종은 실제 씨앗이 있을 때만 이어집니다."
+      },
+      {
+        "id": "crop-pinewood",
+        "name": "눈솔 버섯과 순무",
+        "regionId": "pinewood",
+        "durationMs": 240000,
+        "inputs": {
+          "seed-pinewood": 1
+        },
+        "outputs": {
+          "pinewood-raw": 8,
+          "pinewood-herb": 3
+        },
+        "description": "심어 둔 작물은 탐험과 수비 중에도 자랍니다. 자동 재파종은 실제 씨앗이 있을 때만 이어집니다."
+      },
+      {
+        "id": "crop-frozen-lake",
+        "name": "얼음잎과 호수 감자",
+        "regionId": "frozen-lake",
+        "durationMs": 300000,
+        "inputs": {
+          "seed-frozen-lake": 1
+        },
+        "outputs": {
+          "frozen-lake-raw": 8,
+          "frozen-lake-herb": 3
+        },
+        "description": "심어 둔 작물은 탐험과 수비 중에도 자랍니다. 자동 재파종은 실제 씨앗이 있을 때만 이어집니다."
+      },
+      {
+        "id": "crop-black-bog",
+        "name": "이탄 약초와 늪지 뿌리",
+        "regionId": "black-bog",
+        "durationMs": 360000,
+        "inputs": {
+          "seed-black-bog": 1
+        },
+        "outputs": {
+          "black-bog-raw": 8,
+          "black-bog-herb": 3
+        },
+        "description": "심어 둔 작물은 탐험과 수비 중에도 자랍니다. 자동 재파종은 실제 씨앗이 있을 때만 이어집니다."
+      },
+      {
+        "id": "crop-knife-mountains",
+        "name": "고산 허브와 보리",
+        "regionId": "knife-mountains",
+        "durationMs": 420000,
+        "inputs": {
+          "seed-knife-mountains": 1
+        },
+        "outputs": {
+          "knife-mountains-raw": 8,
+          "knife-mountains-herb": 3
+        },
+        "description": "심어 둔 작물은 탐험과 수비 중에도 자랍니다. 자동 재파종은 실제 씨앗이 있을 때만 이어집니다."
+      },
+      {
+        "id": "crop-aurora-ruins",
+        "name": "극광 열매와 회복초",
+        "regionId": "aurora-ruins",
+        "durationMs": 480000,
+        "inputs": {
+          "seed-aurora-ruins": 1
+        },
+        "outputs": {
+          "aurora-ruins-raw": 8,
+          "aurora-ruins-herb": 3
+        },
+        "description": "심어 둔 작물은 탐험과 수비 중에도 자랍니다. 자동 재파종은 실제 씨앗이 있을 때만 이어집니다."
+      }
+    ],
+    "initialSeeds": {
+      "seed-rime-shore": 3
+    }
+  },
+  "objectives": [
+    {
+      "id": "first-timber",
+      "name": "첫 거점의 재료",
+      "description": "해송 원목을 모아 영구 거점의 일을 돕습니다.",
+      "category": "의뢰",
+      "requirements": [
+        {
+          "type": "itemObtained",
+          "id": "rime-shore-wood",
+          "amount": 16
+        }
+      ],
+      "cost": {
+        "items": {
+          "rime-shore-wood": 8
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-rime-shore": 2
+        },
+        "resources": {
+          "plank": 12
+        },
+        "coins": 40,
+        "townXp": 20
+      },
+      "unlock": {}
+    },
+    {
+      "id": "first-food",
+      "name": "따뜻한 식탁",
+      "description": "첫 지역의 음식을 준비해 주민에게 나눕니다.",
+      "category": "의뢰",
+      "requirements": [
+        {
+          "type": "itemObtained",
+          "id": "rime-shore-food",
+          "amount": 12
+        }
+      ],
+      "cost": {
+        "items": {
+          "rime-shore-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {},
+        "resources": {
+          "provisions": 10,
+          "herbs": 15
+        },
+        "coins": 50,
+        "townXp": 30
+      },
+      "unlock": {}
+    },
+    {
+      "id": "first-harvest",
+      "name": "첫 수확의 기쁨",
+      "description": "실제로 심은 작물을 한 번 수확합니다.",
+      "category": "의뢰",
+      "requirements": [
+        {
+          "type": "farmHarvests",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "rime-shore-herb": 2
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-rime-shore": 3
+        },
+        "resources": {
+          "food": 15
+        },
+        "coins": 30,
+        "townXp": 20
+      },
+      "unlock": {}
+    },
+    {
+      "id": "beacon-rime-shore",
+      "name": "서릿바람 해안 봉화 협약",
+      "description": "지역의 마지막 위협을 넘고 인장을 거점에 전달합니다.",
+      "category": "봉화",
+      "requirements": [
+        {
+          "type": "regionCleared",
+          "id": "rime-shore",
+          "amount": 1
+        },
+        {
+          "type": "enemyKills",
+          "id": "rime-shore-boss",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "rime-shore-trophy": 1
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-rime-shore": 3
+        },
+        "resources": {
+          "wood": 20,
+          "stone": 10
+        },
+        "coins": 100,
+        "townXp": 50
+      },
+      "unlock": {
+        "regionId": "rime-shore"
+      }
+    },
+    {
+      "id": "master-rime-shore",
+      "name": "서릿바람 해안 장인의 손길",
+      "description": "이 지역의 가공법과 보급을 꾸준히 익힙니다.",
+      "category": "숙련",
+      "requirements": [
+        {
+          "type": "masteryLevel",
+          "id": "rime-shore-saw",
+          "amount": 3
+        },
+        {
+          "type": "masteryLevel",
+          "id": "rime-shore-cook",
+          "amount": 3
+        }
+      ],
+      "cost": {
+        "items": {
+          "rime-shore-plank": 4,
+          "rime-shore-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-rime-shore": 2
+        },
+        "resources": {
+          "metal": 6
+        },
+        "coins": 60,
+        "townXp": 30
+      },
+      "unlock": {
+        "regionId": "rime-shore"
+      }
+    },
+    {
+      "id": "beacon-pinewood",
+      "name": "검푸른 침엽림 봉화 협약",
+      "description": "지역의 마지막 위협을 넘고 인장을 거점에 전달합니다.",
+      "category": "봉화",
+      "requirements": [
+        {
+          "type": "regionCleared",
+          "id": "pinewood",
+          "amount": 1
+        },
+        {
+          "type": "enemyKills",
+          "id": "pinewood-boss",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "pinewood-trophy": 1
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-pinewood": 3
+        },
+        "resources": {
+          "wood": 40,
+          "stone": 20
+        },
+        "coins": 200,
+        "townXp": 100
+      },
+      "unlock": {
+        "regionId": "pinewood"
+      }
+    },
+    {
+      "id": "master-pinewood",
+      "name": "검푸른 침엽림 장인의 손길",
+      "description": "이 지역의 가공법과 보급을 꾸준히 익힙니다.",
+      "category": "숙련",
+      "requirements": [
+        {
+          "type": "masteryLevel",
+          "id": "pinewood-saw",
+          "amount": 3
+        },
+        {
+          "type": "masteryLevel",
+          "id": "pinewood-cook",
+          "amount": 3
+        }
+      ],
+      "cost": {
+        "items": {
+          "pinewood-plank": 4,
+          "pinewood-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-pinewood": 2
+        },
+        "resources": {
+          "metal": 12
+        },
+        "coins": 120,
+        "townXp": 60
+      },
+      "unlock": {
+        "regionId": "pinewood"
+      }
+    },
+    {
+      "id": "beacon-frozen-lake",
+      "name": "얼어붙은 호수 봉화 협약",
+      "description": "지역의 마지막 위협을 넘고 인장을 거점에 전달합니다.",
+      "category": "봉화",
+      "requirements": [
+        {
+          "type": "regionCleared",
+          "id": "frozen-lake",
+          "amount": 1
+        },
+        {
+          "type": "enemyKills",
+          "id": "frozen-lake-boss",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "frozen-lake-trophy": 1
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-frozen-lake": 3
+        },
+        "resources": {
+          "wood": 60,
+          "stone": 30
+        },
+        "coins": 300,
+        "townXp": 150
+      },
+      "unlock": {
+        "regionId": "frozen-lake"
+      }
+    },
+    {
+      "id": "master-frozen-lake",
+      "name": "얼어붙은 호수 장인의 손길",
+      "description": "이 지역의 가공법과 보급을 꾸준히 익힙니다.",
+      "category": "숙련",
+      "requirements": [
+        {
+          "type": "masteryLevel",
+          "id": "frozen-lake-saw",
+          "amount": 3
+        },
+        {
+          "type": "masteryLevel",
+          "id": "frozen-lake-cook",
+          "amount": 3
+        }
+      ],
+      "cost": {
+        "items": {
+          "frozen-lake-plank": 4,
+          "frozen-lake-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-frozen-lake": 2
+        },
+        "resources": {
+          "metal": 18
+        },
+        "coins": 180,
+        "townXp": 90
+      },
+      "unlock": {
+        "regionId": "frozen-lake"
+      }
+    },
+    {
+      "id": "beacon-black-bog",
+      "name": "검은 이탄습지 봉화 협약",
+      "description": "지역의 마지막 위협을 넘고 인장을 거점에 전달합니다.",
+      "category": "봉화",
+      "requirements": [
+        {
+          "type": "regionCleared",
+          "id": "black-bog",
+          "amount": 1
+        },
+        {
+          "type": "enemyKills",
+          "id": "black-bog-boss",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "black-bog-trophy": 1
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-black-bog": 3
+        },
+        "resources": {
+          "wood": 80,
+          "stone": 40
+        },
+        "coins": 400,
+        "townXp": 200
+      },
+      "unlock": {
+        "regionId": "black-bog"
+      }
+    },
+    {
+      "id": "master-black-bog",
+      "name": "검은 이탄습지 장인의 손길",
+      "description": "이 지역의 가공법과 보급을 꾸준히 익힙니다.",
+      "category": "숙련",
+      "requirements": [
+        {
+          "type": "masteryLevel",
+          "id": "black-bog-saw",
+          "amount": 3
+        },
+        {
+          "type": "masteryLevel",
+          "id": "black-bog-cook",
+          "amount": 3
+        }
+      ],
+      "cost": {
+        "items": {
+          "black-bog-plank": 4,
+          "black-bog-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-black-bog": 2
+        },
+        "resources": {
+          "metal": 24
+        },
+        "coins": 240,
+        "townXp": 120
+      },
+      "unlock": {
+        "regionId": "black-bog"
+      }
+    },
+    {
+      "id": "beacon-knife-mountains",
+      "name": "칼바람 산맥 봉화 협약",
+      "description": "지역의 마지막 위협을 넘고 인장을 거점에 전달합니다.",
+      "category": "봉화",
+      "requirements": [
+        {
+          "type": "regionCleared",
+          "id": "knife-mountains",
+          "amount": 1
+        },
+        {
+          "type": "enemyKills",
+          "id": "knife-mountains-boss",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "knife-mountains-trophy": 1
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-knife-mountains": 3
+        },
+        "resources": {
+          "wood": 100,
+          "stone": 50
+        },
+        "coins": 500,
+        "townXp": 250
+      },
+      "unlock": {
+        "regionId": "knife-mountains"
+      }
+    },
+    {
+      "id": "master-knife-mountains",
+      "name": "칼바람 산맥 장인의 손길",
+      "description": "이 지역의 가공법과 보급을 꾸준히 익힙니다.",
+      "category": "숙련",
+      "requirements": [
+        {
+          "type": "masteryLevel",
+          "id": "knife-mountains-saw",
+          "amount": 3
+        },
+        {
+          "type": "masteryLevel",
+          "id": "knife-mountains-cook",
+          "amount": 3
+        }
+      ],
+      "cost": {
+        "items": {
+          "knife-mountains-plank": 4,
+          "knife-mountains-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-knife-mountains": 2
+        },
+        "resources": {
+          "metal": 30
+        },
+        "coins": 300,
+        "townXp": 150
+      },
+      "unlock": {
+        "regionId": "knife-mountains"
+      }
+    },
+    {
+      "id": "beacon-aurora-ruins",
+      "name": "북극광 유적 봉화 협약",
+      "description": "지역의 마지막 위협을 넘고 인장을 거점에 전달합니다.",
+      "category": "봉화",
+      "requirements": [
+        {
+          "type": "regionCleared",
+          "id": "aurora-ruins",
+          "amount": 1
+        },
+        {
+          "type": "enemyKills",
+          "id": "aurora-ruins-boss",
+          "amount": 1
+        }
+      ],
+      "cost": {
+        "items": {
+          "aurora-ruins-trophy": 1
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-aurora-ruins": 3
+        },
+        "resources": {
+          "wood": 120,
+          "stone": 60
+        },
+        "coins": 600,
+        "townXp": 300
+      },
+      "unlock": {
+        "regionId": "aurora-ruins"
+      }
+    },
+    {
+      "id": "master-aurora-ruins",
+      "name": "북극광 유적 장인의 손길",
+      "description": "이 지역의 가공법과 보급을 꾸준히 익힙니다.",
+      "category": "숙련",
+      "requirements": [
+        {
+          "type": "masteryLevel",
+          "id": "aurora-ruins-saw",
+          "amount": 3
+        },
+        {
+          "type": "masteryLevel",
+          "id": "aurora-ruins-cook",
+          "amount": 3
+        }
+      ],
+      "cost": {
+        "items": {
+          "aurora-ruins-plank": 4,
+          "aurora-ruins-food": 3
+        },
+        "resources": {},
+        "coins": 0
+      },
+      "rewards": {
+        "items": {
+          "seed-aurora-ruins": 2
+        },
+        "resources": {
+          "metal": 36
+        },
+        "coins": 360,
+        "townXp": 180
+      },
+      "unlock": {
+        "regionId": "aurora-ruins"
+      }
+    },
+    {
+      "id": "town-infrastructure",
+      "name": "오래 머물 수 있는 거점",
+      "description": "필수 생산과 보급 시설을 2단계로 완성합니다.",
+      "category": "장기 목표",
+      "requirements": [
+        {
+          "type": "buildingLevel",
+          "id": "housing",
+          "amount": 2
+        },
+        {
+          "type": "buildingLevel",
+          "id": "storehouse",
+          "amount": 2
+        },
+        {
+          "type": "buildingLevel",
+          "id": "sawmill",
+          "amount": 2
+        },
+        {
+          "type": "buildingLevel",
+          "id": "smithy",
+          "amount": 2
+        },
+        {
+          "type": "buildingLevel",
+          "id": "kitchen",
+          "amount": 2
+        }
+      ],
+      "cost": {
+        "items": {},
+        "resources": {
+          "plank": 20,
+          "metal": 12
+        },
+        "coins": 0
+      },
+      "rewards": {
+        "items": {},
+        "resources": {
+          "cloth": 25,
+          "provisions": 30
+        },
+        "coins": 400,
+        "townXp": 300
+      },
+      "unlock": {
+        "clearedRegions": 1
+      }
+    },
+    {
+      "id": "growing-village",
+      "name": "북방의 작은 마을",
+      "description": "주민 30명과 마을 숙련 5를 이루세요.",
+      "category": "장기 목표",
+      "requirements": [
+        {
+          "type": "population",
+          "amount": 30
+        },
+        {
+          "type": "townLevel",
+          "amount": 5
+        }
+      ],
+      "cost": {
+        "items": {},
+        "resources": {
+          "food": 30,
+          "fuel": 20
+        },
+        "coins": 0
+      },
+      "rewards": {
+        "items": {},
+        "resources": {
+          "provisions": 40
+        },
+        "coins": 500,
+        "townXp": 300
+      },
+      "unlock": {
+        "clearedRegions": 2
+      }
+    },
+    {
+      "id": "northward-completion",
+      "name": "여섯 봉화의 영구 거점",
+      "description": "모든 봉화를 잇고 경비소와 창고를 마지막 단계로 올립니다.",
+      "category": "장기 목표",
+      "requirements": [
+        {
+          "type": "clearedRegions",
+          "amount": 6
+        },
+        {
+          "type": "buildingLevel",
+          "id": "watchtower",
+          "amount": 6
+        },
+        {
+          "type": "buildingLevel",
+          "id": "storehouse",
+          "amount": 6
+        },
+        {
+          "type": "farmHarvests",
+          "amount": 20
+        }
+      ],
+      "cost": {
+        "items": {
+          "aurora-ruins-trophy": 2
+        },
+        "resources": {
+          "provisions": 100
+        },
+        "coins": 0
+      },
+      "rewards": {
+        "items": {},
+        "resources": {
+          "cloth": 100
+        },
+        "coins": 2000,
+        "townXp": 1000
+      },
+      "unlock": {
+        "clearedRegions": 5
+      }
+    }
+  ]
+}

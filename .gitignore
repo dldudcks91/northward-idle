@@ -1,0 +1,25 @@
+# Local secrets and machine-specific files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.codex/backups/
+.codex/local/
+
+# Generated and temporary outputs
+_scratch/
+artifacts/
+node_modules/
+.tools/
+dist/
+coverage/
+.venv/
+__pycache__/
+*.pyc
+*.log
+
+# Editor and OS caches
+.idea/
+.DS_Store
+Thumbs.db

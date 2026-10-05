@@ -1,0 +1,11 @@
+{
+  "name": "northward-idle",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "북방을 탐험하고 위협을 막는 한 사람의 생존 방치 RPG",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "python scripts/serve.py"
+  }
+}

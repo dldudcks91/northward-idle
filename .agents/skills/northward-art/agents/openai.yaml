@@ -1,0 +1,6 @@
+interface:
+  display_name: "북방 게임 아트"
+  short_description: "Create and integrate northern game art with provenance"
+  default_prompt: "Use $northward-art to 실제 사용 크기에 맞는 북방 게임 에셋을 제작하고 출처와 적용 결과를 기록해줘."
+policy:
+  allow_implicit_invocation: true

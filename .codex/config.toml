@@ -1,0 +1,10 @@
+# This file applies when this folder is opened as a trusted Codex project.
+# Keep model choice and the Windows sandbox setup in the user's existing config.
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+[sandbox_workspace_write]
+# Documentation search uses the web tool. Local commands have no blanket network grant.
+network_access = false

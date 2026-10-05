@@ -1,0 +1,6 @@
+interface:
+  display_name: "북방 게임 기획"
+  short_description: "Design progression and record core game decisions"
+  default_prompt: "Use $northward-design to 현재 기획을 읽고 핵심 선택을 함께 정하며 위임된 세부안과 결정 기록을 완성해줘."
+policy:
+  allow_implicit_invocation: true

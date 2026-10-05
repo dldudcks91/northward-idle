@@ -1,0 +1,152 @@
+[
+  {
+    "id": "hero",
+    "source": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-6916e980-f669-4d32-9a94-bfeb9e5dadbd.png",
+    "prompt": "Use case: stylized-concept. Create one completely new original game portrait on a true transparent alpha background. Reference images are rendering-style guides only, never copy their identities, hair, costume, helmet or gadgets. Match their polished cute 3D mobile winter-survival game illustration: softly rounded forms, plump appealing proportions, large expressive glossy eyes, gentle volumetric shading, soft material textures, bright sky-blue accents, warm cream highlights. No ink outlines, no angular cel shading, no flat vector look. Square head-and-upper-chest portrait, all ears and headwear inside canvas with 8% space above and on sides, head prominent, shoulders contained, no text, no scenery, no frame, no drop shadow outside silhouette. Subject: an original cheerful northern explorer, a young adult woman with a short chestnut wavy bob, rounded cheeks and large amber eyes, a sky-blue knitted beanie with a small cream pompom, a blue padded winter coat with a cream fleece collar and a small apricot-orange scarf. Friendly determined smile; simple uncluttered silhouette. She is not any existing WOS hero. Show upper chest only, no hands or weapons.",
+    "refs": [
+      {
+        "path": "artifacts/reference/wos/jessie.png",
+        "role": "rendering style only; not shipped/copied",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+      },
+      {
+        "path": "artifacts/reference/wos/molly.png",
+        "role": "rendering style only; not shipped/copied",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png"
+      }
+    ]
+  },
+  {
+    "id": "bear",
+    "source": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-af251c3d-697c-47fd-9077-a7a4a8dd95f2.png",
+    "prompt": "Use case: stylized-concept. Create one completely new original game portrait on a true transparent alpha background. Reference images are rendering-style guides only, never copy their identities, hair, costume, helmet or gadgets. Match their polished cute 3D mobile winter-survival game illustration: softly rounded forms, plump appealing proportions, large expressive glossy eyes, gentle volumetric shading, soft material textures, bright sky-blue accents, warm cream highlights. No ink outlines, no angular cel shading, no flat vector look. Square head-and-upper-chest portrait, all ears and headwear inside canvas with 8% space above and on sides, head prominent, shoulders contained, no text, no scenery, no frame, no drop shadow outside silhouette. Subject: a cute sturdy real brown bear's head and upper shoulders, small round ears, broad short muzzle, soft dark nose, rounded forehead, large warm dark eyes and plush cinnamon-brown coat with cream muzzle. Animal anatomy and bear silhouette must stay recognizable. Mildly determined friendly expression, closed mouth, no clothes, no humanoid body, no fantasy horns.",
+    "refs": [
+      {
+        "path": "artifacts/reference/wos/jessie.png",
+        "role": "rendering style only; not shipped/copied",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png"
+      },
+      {
+        "path": "artifacts/reference/wos/molly.png",
+        "role": "rendering style only; not shipped/copied",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png"
+      }
+    ]
+  },
+  {
+    "id": "wolf",
+    "source": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-bcdc9e61-8090-4d3a-ac6f-3eba08528eb0.png",
+    "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute sturdy real northern gray wolf, round cheeks yet recognizable elongated wolf muzzle, triangular upright ears, charcoal nose, bright honey-colored eyes and soft gray plush coat with creamy white cheeks and chest. Alert friendly determined expression, mouth closed, natural wolf anatomy, no clothing or humanoid body.",
+    "refs": [
+      {
+        "path": "assets/source/v2/hero.png",
+        "role": "v2 render/cute proportion style only; subject not copied",
+        "lineageAssetId": "hero"
+      },
+      {
+        "path": "assets/source/v2/bear.png",
+        "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+        "lineageAssetId": "bear"
+      }
+    ],
+    "referenceSources": [
+      {
+        "path": "artifacts/reference/wos/jessie.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      },
+      {
+        "path": "artifacts/reference/wos/molly.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      }
+    ]
+  },
+  {
+    "id": "boar",
+    "source": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-02d90339-3fae-47c1-9005-9ba3110bbc35.png",
+    "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute plump real wild boar, short stout muzzle with a broad rounded dark-brown snout and two round nostrils, small pointed ears, tiny smooth ivory upward-curved tusks, brown plush coat and cream cheek accents. Big kind dark eyes and a compact fluffy forehead tuft, friendly determined expression. Preserve boar species anatomy; no clothing or humanoid body.",
+    "refs": [
+      {
+        "path": "assets/source/v2/hero.png",
+        "role": "v2 render/cute proportion style only; subject not copied",
+        "lineageAssetId": "hero"
+      },
+      {
+        "path": "assets/source/v2/bear.png",
+        "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+        "lineageAssetId": "bear"
+      }
+    ],
+    "referenceSources": [
+      {
+        "path": "artifacts/reference/wos/jessie.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      },
+      {
+        "path": "artifacts/reference/wos/molly.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      }
+    ]
+  },
+  {
+    "id": "stag",
+    "source": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-3105aa08-4d8b-4ceb-a613-83e227af4d93.png",
+    "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute real northern red deer stag, soft tawny coat, cream long muzzle and chest, dark rounded nose, broad large ears, large kind honey eyes, a modest symmetrical pair of rounded branching antlers that fit comfortably inside canvas. Friendly calm expression, real deer species anatomy. No clothes or humanoid body.",
+    "refs": [
+      {
+        "path": "assets/source/v2/hero.png",
+        "role": "v2 render/cute proportion style only; subject not copied",
+        "lineageAssetId": "hero"
+      },
+      {
+        "path": "assets/source/v2/bear.png",
+        "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+        "lineageAssetId": "bear"
+      }
+    ],
+    "referenceSources": [
+      {
+        "path": "artifacts/reference/wos/jessie.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      },
+      {
+        "path": "artifacts/reference/wos/molly.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      }
+    ]
+  },
+  {
+    "id": "guardian",
+    "source": "C:\\Users\\Semi\\.codex\\generated_images\\01a102ee-cf53-71f0-a36d-d817813667f0\\exec-2b9fa25f-d214-460b-ba52-8d0fdb36925b.png",
+    "prompt": "Use case: stylized-concept. Create one new original isolated square head-and-upper-chest game portrait with true transparent alpha background. Inputs are rendering-style guides only: match the soft cute polished 3D winter mobile game render, plump rounded forms, large expressive glossy eyes, soft materials, gentle volumetric shading, warm light and cool sky-blue rim light. Match the warmth and cuteness of the bear and explorer but invent this different subject. All ears/antlers/headpieces fully inside canvas, 8% clear space above and beside them, upper chest only, body remains compact. No ink outlines, no angular cel shading, no flat vector look, no scenery, no text, no frame, no shadow outside silhouette. Subject: a cute ancient northern stone guardian, rounded chunky blue-gray stone head and small upper shoulders, a few soft block shapes form a simple broken crown fully inside frame, large luminous turquoise eyes and a gentle determined face, slightly pudgy stone cheeks, a small cap of cream-white snow on crown. Sparse broad shallow stone seams, smooth stone materials, no armor or weapon. Clearly a magical stone creature rather than a human; all forms rounded and friendly.",
+    "refs": [
+      {
+        "path": "assets/source/v2/hero.png",
+        "role": "v2 render/cute proportion style only; subject not copied",
+        "lineageAssetId": "hero"
+      },
+      {
+        "path": "assets/source/v2/bear.png",
+        "role": "v2 rounded 3D animal render style only; bear species identity not copied",
+        "lineageAssetId": "bear"
+      }
+    ],
+    "referenceSources": [
+      {
+        "path": "artifacts/reference/wos/jessie.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/jessie.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      },
+      {
+        "path": "artifacts/reference/wos/molly.png",
+        "url": "https://gom-s3-user-avatar.s3.us-west-2.amazonaws.com/wp-content/uploads/2023/05/molly.png",
+        "role": "indirect style lineage via v2 hero/bear only; not shipped"
+      }
+    ]
+  }
+]
